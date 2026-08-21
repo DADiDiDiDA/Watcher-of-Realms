@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780965954779,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\魔潮扫荡.json",
             "savedViewport": {
-                "x": -3271,
-                "y": 82,
-                "zoom": 0.75
+                "x": -2986,
+                "y": 215,
+                "zoom": 0.87
             },
             "filename": "魔潮扫荡",
-            "version": "v1.6.1"
+            "version": "v1.8.0"
         }
     },
     "$__mpe_external_返回主界面开始_魔潮扫荡": {
@@ -47,8 +44,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4865,
-                "y": 98
+                "x": 4876,
+                "y": 44
             }
         }
     },
@@ -61,8 +58,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4604,
-                "y": 299
+                "x": 4601,
+                "y": 308
             }
         }
     },
@@ -165,7 +162,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "选择魔潮"
+            "选择魔潮",
+            "[JumpBack]进入菜单选择_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -194,12 +192,13 @@
         },
         "post_delay": 2000,
         "next": [
-            "检测魔潮扫荡图标"
+            "检测魔潮扫荡图标",
+            "[JumpBack]选择魔潮_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4313,
-                "y": 311
+                "x": 4308,
+                "y": 83
             }
         }
     },
@@ -254,6 +253,59 @@
             "position": {
                 "x": 3343,
                 "y": 304
+            }
+        }
+    },
+    "选择魔潮_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    942,
+                    30,
+                    228,
+                    376
+                ],
+                "template": [
+                    "魔潮图片.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 4591,
+                "y": -135
+            }
+        }
+    },
+    "进入菜单选择_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1186,
+                    26,
+                    78,
+                    79
+                ],
+                "template": [
+                    "多菜单.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 4257,
+                "y": -150
             }
         }
     }

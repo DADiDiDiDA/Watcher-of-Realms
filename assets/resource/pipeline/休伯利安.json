@@ -3,16 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780493739151,
+            "lastSyncTime": 1787236722582,
             "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\休伯利安.json",
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\休伯利安.json",
             "savedViewport": {
-                "x": 314,
-                "y": 411,
-                "zoom": 0.49
+                "x": 667,
+                "y": 552,
+                "zoom": 0.75
             },
             "filename": "休伯利安",
-            "version": "v1.6.0"
+            "version": "v1.8.0"
         }
     },
     "$__mpe_external_返回主界面开始_休伯利安": {
@@ -24,68 +24,42 @@
         }
     },
     "休伯利安启动": {
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    180,
-                    560,
-                    1,
-                    1
-                ],
-                "end": [
-                    [
-                        779,
-                        283,
-                        1,
-                        1
-                    ]
-                ]
-            }
-        },
-        "repeat": 3,
-        "repeat_delay": 1500,
-        "post_delay": 2000,
-        "next": [
-            "休伯利安滑动屏幕第二次"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -1100,
-                "y": -280
-            }
-        }
-    },
-    "休伯利安滑动屏幕第二次": {
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    180,
-                    560,
-                    1,
-                    1
-                ],
-                "end": [
-                    [
-                        779,
-                        283,
-                        1,
-                        1
-                    ]
-                ]
-            }
-        },
-        "repeat": 3,
-        "repeat_delay": 1500,
-        "post_delay": 2000,
         "next": [
             "点击休伯利安开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -666,
-                "y": -337
+                "x": -687,
+                "y": -313
+            }
+        }
+    },
+    "休伯利安滑动屏幕第二次": {
+        "max_hit": 5,
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    180,
+                    560,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        779,
+                        283,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 202,
+                "y": -458
             }
         }
     },
@@ -157,8 +131,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 172,
-                "y": -600
+                "x": 145,
+                "y": -811
             }
         }
     },
@@ -167,12 +141,13 @@
         "timeout": 5000,
         "next": [
             "点击休伯利安",
+            "[JumpBack]休伯利安滑动屏幕第二次",
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -191,
-                "y": -319
+                "x": -266,
+                "y": -320
             }
         }
     }

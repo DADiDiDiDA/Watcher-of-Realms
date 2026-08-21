@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -397,
-                "y": 105,
-                "zoom": 0.53
+                "x": -126,
+                "y": 330,
+                "zoom": 0.57
             },
             "filename": "领取友情点",
-            "version": "v1.7.3"
+            "version": "v1.8.0"
         }
     },
     "$__mpe_external_返回主界面开始_领取友情点": {
@@ -44,12 +44,13 @@
         },
         "post_delay": 2000,
         "next": [
-            "点击好友界面"
+            "点击好友界面",
+            "[JumpBack]点击好友图标开始_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1379,
-                "y": -50
+                "x": 1262,
+                "y": -205
             }
         }
     },
@@ -120,6 +121,36 @@
             "position": {
                 "x": 1028,
                 "y": 151
+            }
+        }
+    },
+    "点击好友图标开始_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    43,
+                    237,
+                    53,
+                    48
+                ],
+                "template": [
+                    "好友图标.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.55
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1572,
+                "y": -442
             }
         }
     }

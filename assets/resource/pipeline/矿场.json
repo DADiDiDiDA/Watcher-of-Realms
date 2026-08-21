@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780706394008,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\矿场.json",
             "savedViewport": {
-                "x": 475,
-                "y": 322,
+                "x": 611,
+                "y": 592,
                 "zoom": 0.76
             },
             "filename": "矿场",
-            "version": "v1.6.1"
+            "version": "v1.8.0"
         }
     },
     "$__mpe_external_返回主界面开始_矿场": {
@@ -52,7 +49,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "领取矿场"
+            "领取矿场",
+            "[JumpBack]点击矿场开始_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -94,6 +92,41 @@
             "position": {
                 "x": -473,
                 "y": 39
+            }
+        }
+    },
+    "点击矿场开始_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    924,
+                    204,
+                    147,
+                    149
+                ],
+                "template": [
+                    "正常矿场.png",
+                    "资源已满.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    37,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 298,
+                "y": -533
             }
         }
     }

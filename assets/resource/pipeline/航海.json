@@ -3,13 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1787279308479,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\航海.json",
             "savedViewport": {
-                "x": -221,
-                "y": 133,
-                "zoom": 0.66
+                "x": 131,
+                "y": 445,
+                "zoom": 0.86
             },
             "filename": "航海",
-            "version": "v1.7.4"
+            "version": "v1.8.0"
         }
     },
     "$__mpe_external_返回主界面开始_航海": {
@@ -112,30 +115,8 @@
         }
     },
     "航海启动": {
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    180,
-                    560,
-                    1,
-                    1
-                ],
-                "end": [
-                    [
-                        779,
-                        283,
-                        1,
-                        1
-                    ]
-                ]
-            }
-        },
-        "repeat": 3,
-        "repeat_delay": 1500,
-        "post_delay": 2000,
         "next": [
-            "航海滑动屏幕启动"
+            "航海检测状态"
         ],
         "$__mpe_code": {
             "position": {
@@ -149,16 +130,18 @@
         "timeout": 3000,
         "next": [
             "检测航海状态",
-            "是不是航海资源满了_结束"
+            "是不是航海资源满了_结束",
+            "[JumpBack]航海滑动屏幕启动"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -145,
-                "y": -300
+                "x": -444,
+                "y": -249
             }
         }
     },
     "航海滑动屏幕启动": {
+        "max_hit": 5,
         "action": {
             "type": "Swipe",
             "param": {
@@ -178,16 +161,11 @@
                 ]
             }
         },
-        "repeat": 3,
-        "repeat_delay": 1000,
         "post_delay": 2000,
-        "next": [
-            "航海检测状态"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": -556,
-                "y": -116
+                "x": 116,
+                "y": 178
             }
         }
     },
@@ -225,12 +203,13 @@
         "next": [
             "启航按钮有次数吗",
             "航海节点无次数",
-            "贸易正在进行"
+            "贸易正在进行",
+            "[JumpBack]检测航海状态_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 578,
-                "y": -6
+                "x": 555,
+                "y": -102
             }
         }
     },
@@ -285,6 +264,33 @@
             "position": {
                 "x": 1138,
                 "y": 405
+            }
+        }
+    },
+    "检测航海状态_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    259,
+                    151,
+                    576,
+                    283
+                ],
+                "template": [
+                    "航海图标.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 816,
+                "y": -546
             }
         }
     }

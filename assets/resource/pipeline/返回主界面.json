@@ -3,13 +3,68 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1787281316278,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 153,
-                "y": -646,
-                "zoom": 0.7
+                "x": 156,
+                "y": -2611,
+                "zoom": 0.99
             },
             "filename": "返回主界面",
-            "version": "v1.7.3"
+            "version": "v1.8.0"
+        }
+    },
+    "启动游戏": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
+            }
+        },
+        "timeout": -1,
+        "next": [
+            "返回主界面启动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1262,
+                "y": 1165
+            }
+        }
+    },
+    "左上角返回箭头图标": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    3,
+                    2,
+                    101,
+                    62
+                ],
+                "template": [
+                    "左上角返回箭头图标.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 336,
+                "y": 2564
+            }
+        }
+    },
+    "已经到达主界面-任务结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 592,
+                "y": 2233
+            }
         }
     },
     "是不是按Esc按快了": {
@@ -33,7 +88,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 347,
-                "y": 963
+                "y": 808
             }
         }
     },
@@ -58,8 +113,8 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 652,
-                "y": 975
+                "x": 812,
+                "y": 756
             }
         }
     },
@@ -87,8 +142,8 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 332,
-                "y": 303
+                "x": 380,
+                "y": 95
             }
         }
     },
@@ -171,7 +226,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 332,
-                "y": 2233
+                "y": 2169
             }
         }
     },
@@ -199,8 +254,8 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 359,
-                "y": 589
+                "x": 375,
+                "y": 450
             }
         }
     },
@@ -225,22 +280,54 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 332,
-                "y": 1790
+                "x": 323,
+                "y": 1816
             }
         }
     },
-    "返回主界面开始": {
+    "登陆游戏开始_有更新": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
+            }
+        },
+        "timeout": -1,
+        "next": [
+            "进入游戏_有更新"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 827,
+                "y": 1367
+            }
+        }
+    },
+    "直接执行任务": {
+        "timeout": -1,
+        "next": [
+            "返回主界面启动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1295,
+                "y": 831
+            }
+        }
+    },
+    "返回主界面启动": {
         "post_delay": 4000,
         "timeout": 4000,
         "next": [
             "[JumpBack]是不是新角色展馆",
             "[JumpBack]检测红色叉号界面",
             "[JumpBack]是不是按Esc按快了",
+            "[JumpBack]进入游戏",
             "[JumpBack]是不是有更新",
             "[JumpBack]是不是点击关闭的活动",
             "[JumpBack]点击关闭右侧的主菜单按钮_返回主界面",
             "检测是否在主界面",
+            "[JumpBack]左上角返回箭头图标",
             "[JumpBack]连续点击Esc尝试中途退出"
         ],
         "$__mpe_code": {
@@ -250,46 +337,15 @@
             }
         }
     },
-    "连续点击Esc尝试中途退出": {
-        "action": {
-            "type": "ClickKey",
-            "param": {
-                "key": [
-                    4
-                ]
-            }
-        },
-        "post_delay": 3000,
-        "$__mpe_code": {
-            "position": {
-                "x": 314,
-                "y": 2562
-            }
-        }
-    },
-    "已经到达主界面-任务结束": {
-        "$__mpe_code": {
-            "position": {
-                "x": 592,
-                "y": 2233
-            }
-        }
-    },
-    "登陆游戏开始": {
-        "action": {
-            "type": "StartApp",
-            "param": {
-                "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
-            }
-        },
-        "timeout": -1,
+    "返回主界面开始": {
         "next": [
-            "进入游戏"
+            "直接执行任务",
+            "启动游戏"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1295,
-                "y": 1047
+                "x": -1670,
+                "y": 1035
             }
         }
     },
@@ -311,31 +367,10 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "返回主界面开始"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": -876,
-                "y": 1012
-            }
-        }
-    },
-    "登陆游戏开始_有更新": {
-        "action": {
-            "type": "StartApp",
-            "param": {
-                "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
-            }
-        },
-        "timeout": -1,
-        "next": [
-            "进入游戏_有更新"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 827,
-                "y": 1367
+                "x": 377,
+                "y": 1056
             }
         }
     },
@@ -361,6 +396,23 @@
             "position": {
                 "x": 1246,
                 "y": 1332
+            }
+        }
+    },
+    "连续点击Esc尝试中途退出": {
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    4
+                ]
+            }
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 276,
+                "y": 3066
             }
         }
     }

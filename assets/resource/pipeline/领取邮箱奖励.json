@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1784776199129,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\领取邮箱奖励.json",
             "savedViewport": {
-                "x": -6558,
-                "y": -491,
-                "zoom": 0.65
+                "x": -4088,
+                "y": -242,
+                "zoom": 0.44
             },
             "filename": "领取邮箱奖励",
-            "version": "v1.7.4"
+            "version": "v1.7.6"
         }
     },
     "关闭菜单结束": {
@@ -25,7 +22,7 @@
     },
     "开始关闭主菜单界面": {
         "next": [
-            "点击关闭主菜单按钮"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -176,34 +173,6 @@
             }
         }
     },
-    "点击关闭主菜单按钮": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    1178,
-                    10,
-                    89,
-                    565
-                ],
-                "template": [
-                    "主菜单退出.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "关闭菜单结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 11138,
-                "y": 1045
-            }
-        }
-    },
     "邮件奖励领取结束": {
         "next": [
             "开始领取奖励-邮箱"
@@ -240,6 +209,14 @@
             "position": {
                 "x": 10742,
                 "y": 615
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_领取邮箱奖励": {
+        "$__mpe_code": {
+            "position": {
+                "x": 11193,
+                "y": 1241
             }
         }
     }

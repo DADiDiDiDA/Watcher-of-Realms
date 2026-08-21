@@ -8,6 +8,17 @@
     "version": "1.3.2",
     
     "controller": [
+        {  
+            "name": "桌面端",  
+            "type": "Win32",  
+            "win32": {  
+                "class_regex": ".*",  
+                "window_regex": "潮汐守望者",  
+                "screencap": "PrintWindow",  
+                "mouse": "PostMessageWithCursorPos",  
+                "keyboard": "PostMessageWithCursorPos"  
+            }  
+        },  
         {
             "name": "安卓端",
             "type": "Adb",
@@ -27,9 +38,10 @@
     "task": [
         {
             "name": "🎮 登录游戏",
-            "entry": "登陆游戏开始",
+            "entry": "返回主界面开始",
             "default_check": true,
-            "description": "在游戏加载完成后，自动进入游戏（不可以在游戏内执行欧）"
+            "description": "在游戏加载完成后，自动进入游戏（不可以在游戏内执行欧）",
+            "option": ["启动游戏方式"]
         },
         {
             "name": "🎁 领取商城免费礼包",
@@ -178,8 +190,11 @@
                     "label": "装备本一",
                     "description": "刷取装备副本一",
                     "pipeline_override": {
-                        "进入副本选择开始": {
-                            "next": ["进入装备本-装备一"]
+                        "开始选择刷取关卡": {
+                            "next": [
+                                "进入装备本-装备一",
+                                "[JumpBack]装备副本一_第二次"
+                            ]
                         }
                     }
                 },
@@ -188,8 +203,11 @@
                     "label": "装备本二",
                     "description": "刷取装备副本二",
                     "pipeline_override": {
-                        "进入副本选择开始": {
-                            "next": ["进入装备本-装备二"]
+                        "开始选择刷取关卡": {
+                            "next": [
+                                "进入装备本-装备二",
+                                "[JumpBack]装备副本二_第二次"
+                            ]
                         }
                     }
                 },
@@ -198,8 +216,11 @@
                     "label": "装备本三",
                     "description": "刷取装备副本三",
                     "pipeline_override": {
-                        "进入副本选择开始": {
-                            "next": ["进入装备本-装备三"]
+                        "开始选择刷取关卡": {
+                            "next": [
+                                "进入装备本-装备三",
+                                "[JumpBack]装备副本三_第二次"
+                            ]
                         }
                     }
                 },
@@ -208,8 +229,39 @@
                     "label": "神器本",
                     "description": "刷取神器副本",
                     "pipeline_override": {
-                        "进入副本选择开始": {
-                            "next": ["进入神器本"]
+                        "开始选择刷取关卡": {
+                            "next": [
+                                "进入神器本",
+                                "[JumpBack]进入神器本_第二次"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "启动游戏方式": {
+            "type": "select",
+            "label": "启动游戏方式",
+            "description": "选择登录游戏时的启动方式",
+            "default_case": "直接执行任务",
+            "cases": [
+                {
+                    "name": "直接执行任务",
+                    "label": "直接执行任务",
+                    "description": "默认方式，直接进入游戏",
+                    "pipeline_override": {
+                        "返回主界面开始": {
+                            "next": ["直接执行任务"]
+                        }
+                    }
+                },
+                {
+                    "name": "启动游戏",
+                    "label": "启动游戏",
+                    "description": "启动游戏应用（不是模拟器不要用）",
+                    "pipeline_override": {
+                        "返回主界面开始": {
+                            "next": ["启动游戏"]
                         }
                     }
                 }
