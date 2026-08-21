@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -279,
-                "y": 181,
-                "zoom": 0.2
+                "x": -1326,
+                "y": 375,
+                "zoom": 0.76
             },
             "filename": "泰坦废墟任务",
-            "version": "v1.7.3"
+            "version": "v1.8.0"
         }
     },
     "$__mpe_external_返回主界面开始_泰坦废墟任务": {
@@ -205,8 +205,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3180,
-                "y": -147
+                "x": 3154,
+                "y": -254
             }
         }
     },
@@ -219,8 +219,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2876,
-                "y": 110
+                "x": 2848,
+                "y": -40
             }
         }
     },
@@ -422,12 +422,39 @@
         },
         "post_delay": 3000,
         "next": [
+            "[JumpBack]进入泰坦废墟前置界面_第二次",
             "检测泰坦废墟是否有奖励开始"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 2448,
                 "y": -96
+            }
+        }
+    },
+    "进入泰坦废墟前置界面_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    188,
+                    591,
+                    760,
+                    78
+                ],
+                "template": [
+                    "公会图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 2704,
+                "y": -339
             }
         }
     }

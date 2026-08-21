@@ -14,6 +14,30 @@ BUTTON_IMAGE = os.path.join(SCRIPT_DIR, "start_button.png")
 
 CONFIDENCE = 0.8
 WINDOW_TITLE_KEYWORD = "Watcher Of Realms"
+GAME_PROCESS_NAME = "Watcher of Realms.exe"  # 游戏进程名
+
+def close_game_process():
+    """强制关闭游戏进程"""
+    try:
+        # 使用 taskkill 强制结束游戏进程
+        result = subprocess.run(
+            ["taskkill", "/f", "/im", GAME_PROCESS_NAME],
+            capture_output=True,
+            text=True
+        )
+        if result.returncode == 0:
+            print(f"✅ 已关闭游戏进程: {GAME_PROCESS_NAME}")
+            time.sleep(2)  # 等待进程完全退出
+            return True
+        elif "没有找到" in result.stderr or "not found" in result.stderr.lower():
+            print(f"ℹ️ 游戏进程未运行: {GAME_PROCESS_NAME}")
+            return True
+        else:
+            print(f"⚠️ 关闭进程失败: {result.stderr}")
+            return False
+    except Exception as e:
+        print(f"❌ 关闭进程异常: {e}")
+        return False
 
 def activate_launcher_window():
     try:
@@ -51,6 +75,11 @@ def find_and_click_button():
         return False
 
 def launch_game():
+    # ---- 新增：先关闭游戏进程 ----
+    print("🔍 检查并关闭游戏进程...")
+    close_game_process()
+    # ------------------------------
+    
     print("🚀 启动沐瞳启动器...")
     print(f"📂 路径: {LAUNCHER_PATH}")
     subprocess.Popen([LAUNCHER_PATH])
@@ -65,17 +94,15 @@ def launch_game():
         print(f"🎯 第 {attempt} 次尝试点击开始按钮...")
         if find_and_click_button():
             print("🎮 游戏启动指令已发出！")
-            # ---- 成功后自动退出 ----
             print("🔄 脚本执行完毕，自动退出...")
             time.sleep(1)
-            sys.exit(0)  # 正常退出
-            # -----------------------
+            sys.exit(0)
         time.sleep(2)
     
     print("❌ 多次尝试后仍未点击成功")
     print("🔄 3秒后自动退出...")
     time.sleep(3)
-    sys.exit(1)  # 失败退出
+    sys.exit(1)
 
 if __name__ == "__main__":
     launch_game()

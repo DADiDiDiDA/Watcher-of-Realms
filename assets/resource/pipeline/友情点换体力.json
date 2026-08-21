@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -807,
-                "y": 173,
-                "zoom": 0.46
+                "x": -2745,
+                "y": 506,
+                "zoom": 0.87
             },
             "filename": "友情点换体力",
-            "version": "v1.7.3"
+            "version": "v1.8.0"
         }
     },
     "$__mpe_external_返回主界面开始_友情点换体力": {
@@ -95,12 +95,13 @@
         },
         "post_delay": 2000,
         "next": [
-            "进入更换界面"
+            "进入更换界面",
+            "[JumpBack]点击增加体力图标开始_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2535,
-                "y": 205
+                "x": 2313,
+                "y": 135
             }
         }
     },
@@ -165,6 +166,7 @@
         },
         "post_delay": 2000,
         "next": [
+            "进入更换界面_第二次",
             "换体力开始"
         ],
         "$__mpe_code": {
@@ -183,6 +185,58 @@
             "position": {
                 "x": 2031,
                 "y": 386
+            }
+        }
+    },
+    "点击增加体力图标开始_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    598,
+                    16,
+                    82,
+                    32
+                ],
+                "template": [
+                    "体力右边的小加号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 2580,
+                "y": -147
+            }
+        }
+    },
+    "进入更换界面_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1028,
+                    508,
+                    68,
+                    31
+                ],
+                "expected": [
+                    "150"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 2977,
+                "y": -279
             }
         }
     }
