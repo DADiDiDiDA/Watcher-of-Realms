@@ -3,13 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1787319874215,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\公会奖励领取.json",
             "savedViewport": {
-                "x": -1115,
-                "y": 288,
+                "x": -736,
+                "y": 330,
                 "zoom": 0.66
             },
             "filename": "公会奖励领取",
-            "version": "v1.7.4"
+            "version": "v1.8.0"
         }
     },
     "$__mpe_external_返回主界面开始_公会奖励领取": {
@@ -21,7 +24,6 @@
         }
     },
     "开始公会奖励领取": {
-        "post_delay": 2000,
         "next": [
             "进入公会",
             "[JumpBack]返回主界面开始"
@@ -34,9 +36,9 @@
         }
     },
     "开始检查是否有公会奖励": {
-        "post_delay": 4000,
         "timeout": 4000,
         "next": [
+            "[JumpBack]进入公会_第二次",
             "检查是否有公会奖励",
             "返回主界面开始"
         ],
@@ -48,10 +50,10 @@
         }
     },
     "开始领取公会奖励": {
-        "post_delay": 4000,
         "timeout": 4000,
         "next": [
-            "领取公会奖励",
+            "[JumpBack]领取公会奖励",
+            "[JumpBack]确认领取公会奖励",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -88,8 +90,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1850,
-                "y": -359
+                "x": 1875,
+                "y": -411
             }
         }
     },
@@ -112,14 +114,10 @@
             "type": "Click"
         },
         "post_delay": 2000,
-        "next": [
-            "开始领取公会奖励",
-            "领取公会奖励"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 3034,
-                "y": -56
+                "x": 2608,
+                "y": -171
             }
         }
     },
@@ -148,8 +146,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1222,
-                "y": -205
+                "x": 1224,
+                "y": -296
             }
         }
     },
@@ -172,13 +170,37 @@
             "type": "Click"
         },
         "post_delay": 2000,
-        "next": [
-            "确认领取公会奖励"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 2714,
-                "y": -356
+                "x": 2597,
+                "y": -503
+            }
+        }
+    },
+    "进入公会_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    177,
+                    593,
+                    769,
+                    71
+                ],
+                "template": [
+                    "公会图标.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1839,
+                "y": -779
             }
         }
     }

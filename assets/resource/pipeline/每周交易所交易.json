@@ -3,16 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780494362261,
+            "lastSyncTime": 1787320001746,
             "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\每周交易所交易.json",
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\每周交易所交易.json",
             "savedViewport": {
-                "x": -2272,
-                "y": 330,
+                "x": -2436,
+                "y": 404,
                 "zoom": 0.57
             },
             "filename": "每周交易所交易",
-            "version": "v1.6.0"
+            "version": "v1.8.0"
         }
     },
     "$__mpe_external_返回主界面开始_每周交易所交易": {
@@ -24,16 +24,16 @@
         }
     },
     "启动交易开始": {
-        "post_delay": 4000,
         "timeout": 2000,
         "next": [
-            "有没有剩余次数",
+            "[JumpBack]领取交易所奖励",
+            "[JumpBack]有没有剩余次数",
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5319,
-                "y": -192
+                "x": 5312,
+                "y": -437
             }
         }
     },
@@ -56,14 +56,10 @@
             "type": "Click"
         },
         "post_delay": 4000,
-        "next": [
-            "领取交易所奖励",
-            "返回主界面开始"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 5660,
-                "y": -559
+                "x": 5726,
+                "y": -474
             }
         }
     },
@@ -91,13 +87,12 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4996,
-                "y": -228
+                "x": 4961,
+                "y": -237
             }
         }
     },
     "每周交易所交易开始": {
-        "post_delay": 4000,
         "timeout": 2000,
         "next": [
             "每周交易所交易",
@@ -129,13 +124,10 @@
             "type": "Click"
         },
         "post_delay": 2000,
-        "next": [
-            "启动交易开始"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 6210,
-                "y": -405
+                "x": 5750,
+                "y": -783
             }
         }
     }

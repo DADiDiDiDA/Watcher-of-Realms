@@ -3,13 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1787320655923,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\领取邮箱奖励.json",
             "savedViewport": {
-                "x": -4088,
-                "y": -242,
-                "zoom": 0.44
+                "x": -6122,
+                "y": -366,
+                "zoom": 0.66
             },
             "filename": "领取邮箱奖励",
-            "version": "v1.7.6"
+            "version": "v1.8.0"
+        }
+    },
+    "$__mpe_external_返回主界面开始_领取邮箱奖励": {
+        "$__mpe_code": {
+            "position": {
+                "x": 11193,
+                "y": 1241
+            }
         }
     },
     "关闭菜单结束": {
@@ -26,8 +37,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 10781,
-                "y": 1209
+                "x": 10792,
+                "y": 1194
             }
         }
     },
@@ -43,21 +54,19 @@
         }
     },
     "开始领取奖励-邮箱": {
-        "post_delay": 4000,
         "timeout": 4000,
         "next": [
-            "领取邮件奖励开始",
+            "[JumpBack]领取邮件奖励开始",
             "开始关闭主菜单界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 10490,
-                "y": 938
+                "x": 10463,
+                "y": 920
             }
         }
     },
     "开始领取邮箱奖励": {
-        "post_delay": 4000,
         "timeout": 4000,
         "next": [
             "检测是否有可领取奖励",
@@ -65,8 +74,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8495,
-                "y": 1129
+                "x": 8315,
+                "y": 1131
             }
         }
     },
@@ -94,13 +103,12 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9539,
-                "y": 790
+                "x": 9513,
+                "y": 746
             }
         }
     },
     "有可领取奖励": {
-        "post_delay": 4000,
         "timeout": 4000,
         "next": [
             "是邮箱奖励吗",
@@ -108,8 +116,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9179,
-                "y": 969
+                "x": 9100,
+                "y": 952
             }
         }
     },
@@ -140,7 +148,7 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8829,
+                "x": 8700,
                 "y": 877
             }
         }
@@ -173,17 +181,6 @@
             }
         }
     },
-    "邮件奖励领取结束": {
-        "next": [
-            "开始领取奖励-邮箱"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 11048,
-                "y": 739
-            }
-        }
-    },
     "领取邮件奖励开始": {
         "recognition": {
             "type": "OCR",
@@ -202,21 +199,10 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "邮件奖励领取结束"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 10742,
-                "y": 615
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_领取邮箱奖励": {
-        "$__mpe_code": {
-            "position": {
-                "x": 11193,
-                "y": 1241
+                "x": 10804,
+                "y": 695
             }
         }
     }

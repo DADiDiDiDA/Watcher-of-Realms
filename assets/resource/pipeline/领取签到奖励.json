@@ -3,16 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780495515813,
+            "lastSyncTime": 1787320652825,
             "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Tide-Watcher\\assets\\resource\\pipeline\\领取签到奖励.json",
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\领取签到奖励.json",
             "savedViewport": {
-                "x": -2813,
-                "y": -144,
-                "zoom": 0.37
+                "x": -6187,
+                "y": -491,
+                "zoom": 0.66
             },
             "filename": "领取签到奖励",
-            "version": "v1.6.0"
+            "version": "v1.8.0"
         }
     },
     "关闭菜单结束-领取签到奖励": {
@@ -40,13 +40,12 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9825,
-                "y": 757
+                "x": 9827,
+                "y": 775
             }
         }
     },
     "开始领取签到奖励": {
-        "post_delay": 4000,
         "timeout": 4000,
         "next": [
             "检测是否有可领取奖励-签到",
@@ -54,8 +53,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8495,
-                "y": 1129
+                "x": 8337,
+                "y": 1077
             }
         }
     },
@@ -83,13 +82,12 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9565,
-                "y": 757
+                "x": 9551,
+                "y": 752
             }
         }
     },
     "有可领取奖励-签到": {
-        "post_delay": 4000,
         "timeout": 4000,
         "next": [
             "是签到奖励待领取吗",
@@ -125,12 +123,13 @@
             "type": "Click"
         },
         "next": [
+            "[JumpBack]检测是否有可领取奖励-签到_第二次",
             "有可领取奖励-签到"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8829,
-                "y": 877
+                "x": 8718,
+                "y": 810
             }
         }
     },
@@ -245,6 +244,35 @@
             "position": {
                 "x": 10409,
                 "y": 707
+            }
+        }
+    },
+    "检测是否有可领取奖励-签到_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    811,
+                    8,
+                    468,
+                    167
+                ],
+                "template": [
+                    "主菜单待领取.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.85
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 9087,
+                "y": 653
             }
         }
     }

@@ -3,13 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1787443541119,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\英灵召唤一次.json",
             "savedViewport": {
-                "x": -3588,
-                "y": 123,
-                "zoom": 0.57
+                "x": -5690,
+                "y": 343,
+                "zoom": 0.76
             },
             "filename": "英灵召唤一次",
-            "version": "v1.7.4"
+            "version": "v1.8.0"
         }
     },
     "$__mpe_external_返回主界面开始_英灵召唤一次": {
@@ -21,7 +24,6 @@
         }
     },
     "单次召唤开始": {
-        "post_delay": 4000,
         "timeout": 3000,
         "next": [
             "开始单次召唤",
@@ -35,7 +37,6 @@
         }
     },
     "尝试检查召唤任务是否已经完成": {
-        "post_delay": 3000,
         "next": [
             "进入任务界面检查召唤任务",
             "[JumpBack]返回主界面开始"
@@ -80,7 +81,6 @@
         }
     },
     "开始检查召唤一次任务是否完成": {
-        "post_delay": 4000,
         "timeout": 3000,
         "next": [
             "检查召唤一次任务是否完成",
@@ -89,13 +89,12 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5495,
-                "y": -1352
+                "x": 5424,
+                "y": -1465
             }
         }
     },
     "开始检查召唤一次任务是否完成第三次": {
-        "post_delay": 4000,
         "timeout": 3000,
         "next": [
             "检查召唤一次任务是否完成第三次",
@@ -109,7 +108,6 @@
         }
     },
     "开始检查召唤一次任务是否完成第二次": {
-        "post_delay": 3000,
         "timeout": 3000,
         "next": [
             "检查召唤一次任务是否完成第二次",
@@ -135,18 +133,17 @@
         }
     },
     "开始选择英灵召唤": {
-        "post_delay": 3000,
         "timeout": 3000,
         "next": [
             "选择英灵召唤",
             "无活动召唤-搜索正常召唤",
             "疑似是保底召唤召唤",
-            "进入英灵召唤界面"
+            "[JumpBack]进入英灵召唤界面_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6912,
-                "y": 3
+                "x": 6776,
+                "y": -7
             }
         }
     },
@@ -381,6 +378,43 @@
             }
         }
     },
+    "疑似是保底召唤召唤": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1,
+                    152,
+                    61,
+                    177
+                ],
+                "template": [
+                    "蓝色召唤水晶图标.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    57,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "单次召唤开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7231,
+                "y": 265
+            }
+        }
+    },
     "确定召唤角色": {
         "recognition": {
             "type": "OCR",
@@ -399,9 +433,6 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "确定收获召唤角色"
-        ],
         "$__mpe_code": {
             "position": {
                 "x": 8519,
@@ -432,13 +463,12 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8836,
-                "y": -248
+                "x": 8589,
+                "y": -230
             }
         }
     },
     "第三次滑动屏幕检查召唤任务": {
-        "post_delay": 4000,
         "next": [
             "滑动任务界面检查召唤任务第二次"
         ],
@@ -450,7 +480,6 @@
         }
     },
     "第二次滑动屏幕检查召唤任务": {
-        "post_delay": 4000,
         "next": [
             "滑动任务界面检查召唤任务"
         ],
@@ -462,10 +491,9 @@
         }
     },
     "等待召唤动画结束": {
-        "post_delay": 10000,
         "next": [
-            "确定召唤角色",
-            "返回主界面开始"
+            "[JumpBack]确定召唤角色",
+            "确定收获召唤角色"
         ],
         "$__mpe_code": {
             "position": {
@@ -499,8 +527,34 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4696,
-                "y": -1467
+                "x": 4572,
+                "y": -1575
+            }
+        }
+    },
+    "进入任务界面检查召唤任务_错误处理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    690,
+                    653,
+                    45,
+                    28
+                ],
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 5015,
+                "y": -1321
             }
         }
     },
@@ -529,8 +583,34 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6602,
-                "y": -192
+                "x": 6440,
+                "y": -185
+            }
+        }
+    },
+    "进入英灵召唤界面_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    741,
+                    593,
+                    218,
+                    87
+                ],
+                "template": [
+                    "召唤图片.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 7258,
+                "y": 592
             }
         }
     },
@@ -558,8 +638,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6313,
-                "y": -178
+                "x": 6172,
+                "y": -166
             }
         }
     },
@@ -586,8 +666,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5126,
-                "y": -1467
+                "x": 5037,
+                "y": -1612
             }
         }
     },
@@ -617,69 +697,6 @@
             "position": {
                 "x": 7205,
                 "y": -322
-            }
-        }
-    },
-    "进入任务界面检查召唤任务_错误处理": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    690,
-                    653,
-                    45,
-                    28
-                ],
-                "expected": [
-                    "任务"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": 5090,
-                "y": -1212
-            }
-        }
-    },
-    "疑似是保底召唤召唤": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    1,
-                    152,
-                    61,
-                    177
-                ],
-                "template": [
-                    "蓝色召唤水晶图标.png"
-                ],
-                "green_mask": true
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    57,
-                    0,
-                    0,
-                    0
-                ]
-            }
-        },
-        "next": [
-            "单次召唤开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 7240,
-                "y": 315
             }
         }
     }

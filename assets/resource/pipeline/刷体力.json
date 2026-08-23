@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787273945282,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\刷体力.json",
             "savedViewport": {
-                "x": 1080,
-                "y": 804,
-                "zoom": 0.57
+                "x": -227,
+                "y": 552,
+                "zoom": 0.33
             },
             "filename": "刷体力",
             "version": "v1.8.0"
@@ -43,8 +40,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3141,
-                "y": -38
+                "x": 3164,
+                "y": -132
             }
         }
     },
@@ -66,15 +63,40 @@
                 ]
             }
         },
-        "post_delay": 4000,
         "next": [
             "自动战斗次数最大化",
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2107,
-                "y": -567
+                "x": 2167,
+                "y": -711
+            }
+        }
+    },
+    "增加扫荡次数": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    871,
+                    303,
+                    68,
+                    58
+                ],
+                "template": [
+                    "体力右边的小加号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1500,
+        "$__mpe_code": {
+            "position": {
+                "x": 2875,
+                "y": -934
             }
         }
     },
@@ -130,12 +152,127 @@
         "post_delay": 2000,
         "next": [
             "最小化自动战斗",
-            "刷本有没有提示体力不足"
+            "刷本有没有提示体力不足",
+            "[JumpBack]开始自动战斗_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2763,
-                "y": -350
+                "x": 2805,
+                "y": -614
+            }
+        }
+    },
+    "开始自动战斗_扫荡": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    652,
+                    552,
+                    228,
+                    60
+                ],
+                "expected": [
+                    "开始战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "等待扫荡结束",
+            "[JumpBack]开始自动战斗_扫荡_第二次",
+            "扫荡体力不足任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3496,
+                "y": -1142
+            }
+        }
+    },
+    "开始自动战斗_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    652,
+                    552,
+                    228,
+                    60
+                ],
+                "expected": [
+                    "开始战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 3189,
+                "y": -713
+            }
+        }
+    },
+    "开始选择刷取关卡": {
+        "next": [
+            "进入装备本-装备一",
+            "进入装备本-装备二",
+            "进入装备本-装备三",
+            "进入神器本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1483,
+                "y": -890
+            }
+        }
+    },
+    "开始选择完成方式": {
+        "next": [
+            "[JumpBack]进入扫荡战斗配置",
+            "进入自动战斗配置",
+            "[JumpBack]开始检测哪一关完成了_第二次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1173,
+                "y": -631
+            }
+        }
+    },
+    "扫荡结束确认结果": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    855,
+                    556,
+                    97,
+                    50
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]扫荡结束确认结果_第二次",
+            "[JumpBack]确认扫荡奖励",
+            "进入自动战斗配置"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4241,
+                "y": -1148
             }
         }
     },
@@ -159,17 +296,17 @@
         },
         "post_delay": 2000,
         "next": [
+            "[JumpBack]最小化自动战斗_第二次",
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3135,
-                "y": -318
+                "x": 3238,
+                "y": -436
             }
         }
     },
     "检测后台战斗是不是开着的": {
-        "post_delay": 4000,
         "timeout": 2000,
         "next": [
             "后台战斗是开启的吗",
@@ -179,6 +316,56 @@
             "position": {
                 "x": 1839,
                 "y": -451
+            }
+        }
+    },
+    "确认扫荡奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    583,
+                    655,
+                    126,
+                    60
+                ],
+                "expected": [
+                    "点击关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4633,
+                "y": -1241
+            }
+        }
+    },
+    "等待扫荡结束": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    520,
+                    28,
+                    239,
+                    78
+                ],
+                "expected": [
+                    "扫荡详情"
+                ]
+            }
+        },
+        "next": [
+            "扫荡结束确认结果"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3906,
+                "y": -1133
             }
         }
     },
@@ -207,8 +394,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2477,
-                "y": -568
+                "x": 2483,
+                "y": -776
             }
         }
     },
@@ -244,6 +431,34 @@
             }
         }
     },
+    "装备副本一_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    877,
+                    54,
+                    191,
+                    612
+                ],
+                "expected": [
+                    "前往"
+                ],
+                "order_by": "Vertical",
+                "index": 0
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": -172,
+                "y": -2021
+            }
+        }
+    },
     "装备副本三": {
         "recognition": {
             "type": "OCR",
@@ -273,6 +488,34 @@
             "position": {
                 "x": -427,
                 "y": -980
+            }
+        }
+    },
+    "装备副本三_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    877,
+                    54,
+                    191,
+                    612
+                ],
+                "expected": [
+                    "前往"
+                ],
+                "order_by": "Vertical",
+                "index": 2
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": -164,
+                "y": -781
             }
         }
     },
@@ -308,8 +551,60 @@
             }
         }
     },
+    "装备副本二_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    877,
+                    54,
+                    191,
+                    612
+                ],
+                "expected": [
+                    "前往"
+                ],
+                "order_by": "Vertical",
+                "index": 1
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": -155,
+                "y": -1213
+            }
+        }
+    },
+    "调整扫荡次数为10": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    303,
+                    248,
+                    150,
+                    52
+                ],
+                "expected": [
+                    "10"
+                ]
+            }
+        },
+        "next": [
+            "开始自动战斗_扫荡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2888,
+                "y": -1260
+            }
+        }
+    },
     "进入副本选择": {
-        "post_delay": 3000,
         "next": [
             "进入副本选择开始",
             "[JumpBack]返回主界面开始"
@@ -377,6 +672,31 @@
             }
         }
     },
+    "进入扫荡战斗配置": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    919,
+                    589,
+                    21,
+                    16
+                ],
+                "expected": [
+                    "10"
+                ]
+            }
+        },
+        "next": [
+            "选择扫荡界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1560,
+                "y": -969
+            }
+        }
+    },
     "进入神器本": {
         "recognition": {
             "type": "OCR",
@@ -407,6 +727,32 @@
             }
         }
     },
+    "进入神器本_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    657,
+                    243,
+                    207,
+                    74
+                ],
+                "expected": [
+                    "神器"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": -337,
+                "y": -457
+            }
+        }
+    },
     "进入自动战斗配置": {
         "recognition": {
             "type": "OCR",
@@ -427,12 +773,40 @@
         },
         "post_delay": 2000,
         "next": [
+            "[JumpBack]进入自动战斗配置_第二次",
             "检测后台战斗是不是开着的"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1563,
-                "y": -446
+                "x": 1509,
+                "y": -600
+            }
+        }
+    },
+    "进入自动战斗配置_第二次": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    958,
+                    620,
+                    142,
+                    52
+                ],
+                "expected": [
+                    "自动战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1846,
+                "y": -772
             }
         }
     },
@@ -466,6 +840,32 @@
             }
         }
     },
+    "进入装备本-装备一_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    99,
+                    245,
+                    193,
+                    91
+                ],
+                "expected": [
+                    "装备本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": -666,
+                "y": -2037
+            }
+        }
+    },
     "进入装备本-装备三": {
         "recognition": {
             "type": "OCR",
@@ -493,6 +893,32 @@
             "position": {
                 "x": -937,
                 "y": -1008
+            }
+        }
+    },
+    "进入装备本-装备三_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    99,
+                    245,
+                    193,
+                    91
+                ],
+                "expected": [
+                    "装备本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": -666,
+                "y": -845
             }
         }
     },
@@ -526,100 +952,6 @@
             }
         }
     },
-    "开始选择刷取关卡": {
-        "next": [
-            "进入装备本-装备一",
-            "进入装备本-装备二",
-            "进入装备本-装备三",
-            "进入神器本"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -1483,
-                "y": -890
-            }
-        }
-    },
-    "进入神器本_第二次": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    657,
-                    243,
-                    207,
-                    74
-                ],
-                "expected": [
-                    "神器"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": -337,
-                "y": -457
-            }
-        }
-    },
-    "进入装备本-装备一_第二次": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    99,
-                    245,
-                    193,
-                    91
-                ],
-                "expected": [
-                    "装备本"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": -666,
-                "y": -2037
-            }
-        }
-    },
-    "装备副本一_第二次": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    877,
-                    54,
-                    191,
-                    612
-                ],
-                "expected": [
-                    "前往"
-                ],
-                "order_by": "Vertical",
-                "index": 0
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": -172,
-                "y": -2021
-            }
-        }
-    },
     "进入装备本-装备二_第二次": {
         "recognition": {
             "type": "OCR",
@@ -646,125 +978,6 @@
             }
         }
     },
-    "装备副本二_第二次": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    877,
-                    54,
-                    191,
-                    612
-                ],
-                "expected": [
-                    "前往"
-                ],
-                "order_by": "Vertical",
-                "index": 1
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": -155,
-                "y": -1213
-            }
-        }
-    },
-    "进入装备本-装备三_第二次": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    99,
-                    245,
-                    193,
-                    91
-                ],
-                "expected": [
-                    "装备本"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": -666,
-                "y": -845
-            }
-        }
-    },
-    "装备副本三_第二次": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    877,
-                    54,
-                    191,
-                    612
-                ],
-                "expected": [
-                    "前往"
-                ],
-                "order_by": "Vertical",
-                "index": 2
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": -164,
-                "y": -781
-            }
-        }
-    },
-    "开始选择完成方式": {
-        "next": [
-            "[JumpBack]进入扫荡战斗配置",
-            "进入自动战斗配置"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1173,
-                "y": -631
-            }
-        }
-    },
-    "进入扫荡战斗配置": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    919,
-                    589,
-                    21,
-                    16
-                ],
-                "expected": [
-                    "10"
-                ]
-            }
-        },
-        "next": [
-            "选择扫荡界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1676,
-                "y": -899
-            }
-        }
-    },
     "选择扫荡界面": {
         "recognition": {
             "type": "TemplateMatch",
@@ -785,67 +998,42 @@
         },
         "next": [
             "调整扫荡次数为10",
-            "[JumpBack]增加扫荡次数"
+            "[JumpBack]增加扫荡次数",
+            "[JumpBack]选择扫荡界面_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2611,
-                "y": -953
+                "x": 2259,
+                "y": -1095
             }
         }
     },
-    "增加扫荡次数": {
+    "选择扫荡界面_第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    871,
-                    303,
-                    68,
-                    58
+                    858,
+                    583,
+                    92,
+                    99
                 ],
                 "template": [
-                    "体力右边的小加号.png"
+                    "扫荡图标.png"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
-        "post_delay": 1500,
         "$__mpe_code": {
             "position": {
-                "x": 3075,
-                "y": -880
+                "x": 2542,
+                "y": -1341
             }
         }
     },
-    "调整扫荡次数为10": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    303,
-                    248,
-                    150,
-                    52
-                ],
-                "expected": [
-                    "10"
-                ]
-            }
-        },
-        "next": [
-            "开始自动战斗_扫荡"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3080,
-                "y": -1210
-            }
-        }
-    },
-    "开始自动战斗_扫荡": {
+    "开始自动战斗_扫荡_第二次": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -864,42 +1052,14 @@
             "type": "Click"
         },
         "post_delay": 2000,
-        "next": [
-            "等待扫荡结束"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 3496,
-                "y": -1142
+                "x": 3781,
+                "y": -847
             }
         }
     },
-    "等待扫荡结束": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    520,
-                    28,
-                    239,
-                    78
-                ],
-                "expected": [
-                    "扫荡详情"
-                ]
-            }
-        },
-        "next": [
-            "扫荡结束确认结果"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3906,
-                "y": -1133
-            }
-        }
-    },
-    "扫荡结束确认结果": {
+    "扫荡结束确认结果_第二次": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -917,28 +1077,76 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "确认扫荡奖励"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 4238,
-                "y": -1120
+                "x": 4697,
+                "y": -967
             }
         }
     },
-    "确认扫荡奖励": {
+    "最小化自动战斗_第二次": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    583,
-                    655,
-                    126,
-                    60
+                    1049,
+                    557,
+                    141,
+                    47
                 ],
                 "expected": [
-                    "点击关闭"
+                    "最小化"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 3543,
+                "y": -521
+            }
+        }
+    },
+    "扫荡体力不足任务结束": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    567,
+                    98,
+                    146,
+                    47
+                ],
+                "expected": [
+                    "恢复体力"
+                ]
+            }
+        },
+        "next": [
+            "返回上一级-扫荡体力不足"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3823,
+                "y": -1369
+            }
+        }
+    },
+    "返回上一级-扫荡体力不足": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1133,
+                    35,
+                    136,
+                    74
+                ],
+                "template": [
+                    "红色X号.png"
                 ]
             }
         },
@@ -947,8 +1155,36 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 4544,
-                "y": -1100
+                "x": 4215,
+                "y": -1389
+            }
+        }
+    },
+    "开始检测哪一关完成了_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    7,
+                    96,
+                    73,
+                    599
+                ],
+                "template": [
+                    "三星通关标志.png"
+                ],
+                "order_by": "Vertical",
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1528,
+                "y": -230
             }
         }
     }

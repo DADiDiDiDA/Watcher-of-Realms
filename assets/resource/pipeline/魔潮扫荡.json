@@ -3,10 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1787320657664,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\魔潮扫荡.json",
             "savedViewport": {
-                "x": -2986,
-                "y": 215,
-                "zoom": 0.87
+                "x": -2914,
+                "y": 14,
+                "zoom": 0.66
             },
             "filename": "魔潮扫荡",
             "version": "v1.8.0"
@@ -50,7 +53,6 @@
         }
     },
     "检测魔潮扫荡图标": {
-        "post_delay": 4000,
         "timeout": 2000,
         "next": [
             "有没有扫荡按键",
@@ -93,7 +95,6 @@
         }
     },
     "确认开始魔潮扫荡": {
-        "post_delay": 3000,
         "next": [
             "确认不使用剩余次数"
         ],
@@ -132,12 +133,13 @@
         },
         "post_delay": 2000,
         "next": [
-            "进入菜单选择"
+            "进入菜单选择",
+            "[JumpBack]进入挑战要塞魔潮_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3665,
-                "y": 40
+                "x": 3551,
+                "y": -28
             }
         }
     },
@@ -167,8 +169,35 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3998,
-                "y": 55
+                "x": 3971,
+                "y": 37
+            }
+        }
+    },
+    "进入菜单选择_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1186,
+                    26,
+                    78,
+                    79
+                ],
+                "template": [
+                    "多菜单.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 4233,
+                "y": -270
             }
         }
     },
@@ -202,6 +231,32 @@
             }
         }
     },
+    "选择魔潮_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    942,
+                    30,
+                    228,
+                    376
+                ],
+                "template": [
+                    "魔潮图片.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 4591,
+                "y": -135
+            }
+        }
+    },
     "领取魔潮奖励": {
         "recognition": {
             "type": "OCR",
@@ -232,7 +287,6 @@
         }
     },
     "领取魔潮扫荡奖励节点": {
-        "post_delay": 15000,
         "next": [
             "领取魔潮奖励"
         ],
@@ -244,68 +298,48 @@
         }
     },
     "魔潮扫荡开始节点": {
-        "post_delay": 2000,
         "next": [
             "进入挑战要塞魔潮",
             "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3343,
-                "y": 304
+                "x": 3207,
+                "y": 272
             }
         }
     },
-    "选择魔潮_第二次": {
+    "进入挑战要塞魔潮_第二次": {
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
                 "roi": [
-                    942,
-                    30,
-                    228,
-                    376
+                    933,
+                    547,
+                    103,
+                    29
                 ],
-                "template": [
-                    "魔潮图片.png"
+                "expected": [
+                    "要塞"
                 ]
             }
         },
         "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": 4591,
-                "y": -135
-            }
-        }
-    },
-    "进入菜单选择_第二次": {
-        "recognition": {
-            "type": "TemplateMatch",
+            "type": "Click",
             "param": {
-                "roi": [
-                    1186,
-                    26,
-                    78,
-                    79
-                ],
-                "template": [
-                    "多菜单.png"
-                ],
-                "green_mask": true
+                "target": [
+                    981,
+                    483,
+                    21,
+                    50
+                ]
             }
-        },
-        "action": {
-            "type": "Click"
         },
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 4257,
-                "y": -150
+                "x": 3844,
+                "y": -269
             }
         }
     }

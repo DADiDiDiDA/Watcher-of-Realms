@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787281316278,
+            "lastSyncTime": 1787358905709,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 156,
-                "y": -2611,
-                "zoom": 0.99
+                "x": 507,
+                "y": -661,
+                "zoom": 0.37
             },
             "filename": "返回主界面",
             "version": "v1.8.0"
@@ -64,6 +64,32 @@
             "position": {
                 "x": 592,
                 "y": 2233
+            }
+        }
+    },
+    "战斗结束领取奖励_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1023,
+                    626,
+                    196,
+                    60
+                ],
+                "expected": [
+                    "完成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "$__mpe_code": {
+            "position": {
+                "x": 299,
+                "y": 2783
             }
         }
     },
@@ -219,7 +245,6 @@
                 ]
             }
         },
-        "post_delay": 4000,
         "next": [
             "已经到达主界面-任务结束"
         ],
@@ -316,7 +341,6 @@
         }
     },
     "返回主界面启动": {
-        "post_delay": 4000,
         "timeout": 4000,
         "next": [
             "[JumpBack]是不是新角色展馆",
@@ -328,6 +352,7 @@
             "[JumpBack]点击关闭右侧的主菜单按钮_返回主界面",
             "检测是否在主界面",
             "[JumpBack]左上角返回箭头图标",
+            "[JumpBack]战斗结束领取奖励_第二次",
             "[JumpBack]连续点击Esc尝试中途退出"
         ],
         "$__mpe_code": {
@@ -400,11 +425,13 @@
         }
     },
     "连续点击Esc尝试中途退出": {
+        "max_hit": 20,
         "action": {
             "type": "ClickKey",
             "param": {
                 "key": [
-                    4
+                    4,
+                    111
                 ]
             }
         },

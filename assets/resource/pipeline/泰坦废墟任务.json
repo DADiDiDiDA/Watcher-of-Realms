@@ -3,10 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1787320004878,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\泰坦废墟任务.json",
             "savedViewport": {
-                "x": -1326,
-                "y": 375,
-                "zoom": 0.76
+                "x": -2468,
+                "y": -2,
+                "zoom": 0.66
             },
             "filename": "泰坦废墟任务",
             "version": "v1.8.0"
@@ -21,7 +24,6 @@
         }
     },
     "准备开始泰坦自动战斗": {
-        "post_delay": 4000,
         "timeout": 4000,
         "next": [
             "检查剩余挑战次数",
@@ -29,22 +31,21 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4258,
-                "y": 300
+                "x": 4386,
+                "y": 268
             }
         }
     },
     "开始接受泰坦奖励": {
-        "post_delay": 4000,
         "timeout": 5000,
         "next": [
-            "跳过泰坦奖励",
+            "[JumpBack]跳过泰坦奖励",
             "准备开始泰坦自动战斗"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4193,
-                "y": 7
+                "x": 4121,
+                "y": -134
             }
         }
     },
@@ -101,8 +102,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3862,
-                "y": 26
+                "x": 3837,
+                "y": -161
             }
         }
     },
@@ -127,8 +128,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4648,
-                "y": 398
+                "x": 4672,
+                "y": 406
             }
         }
     },
@@ -162,12 +163,13 @@
             }
         },
         "next": [
-            "开始领取泰坦奖励"
+            "开始领取泰坦奖励",
+            "[JumpBack]检测哪个泰坦关卡有奖励_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3526,
-                "y": -88
+                "x": 3500,
+                "y": -273
             }
         }
     },
@@ -201,17 +203,17 @@
             }
         },
         "next": [
-            "检测哪个泰坦关卡有奖励"
+            "检测哪个泰坦关卡有奖励",
+            "[JumpBack]检测泰坦废墟是否有奖励_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3154,
-                "y": -254
+                "x": 3107,
+                "y": -369
             }
         }
     },
     "检测泰坦废墟是否有奖励开始": {
-        "post_delay": 4000,
         "timeout": 4000,
         "next": [
             "检测泰坦废墟是否有奖励",
@@ -219,8 +221,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2848,
-                "y": -40
+                "x": 2811,
+                "y": -124
             }
         }
     },
@@ -381,24 +383,11 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "跳过泰坦奖励结束"
-        ],
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 4439,
                 "y": -192
-            }
-        }
-    },
-    "跳过泰坦奖励结束": {
-        "next": [
-            "开始接受泰坦奖励"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4774,
-                "y": -94
             }
         }
     },
@@ -427,8 +416,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2448,
-                "y": -96
+                "x": 2197,
+                "y": -251
             }
         }
     },
@@ -453,8 +442,80 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 2704,
-                "y": -339
+                "x": 2525,
+                "y": -480
+            }
+        }
+    },
+    "检测泰坦废墟是否有奖励_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    842,
+                    148,
+                    408,
+                    66
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -175,
+                    27,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3480,
+                "y": -598
+            }
+        }
+    },
+    "检测哪个泰坦关卡有奖励_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    237,
+                    72,
+                    57,
+                    273
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -32,
+                    18,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3865,
+                "y": -492
             }
         }
     }
