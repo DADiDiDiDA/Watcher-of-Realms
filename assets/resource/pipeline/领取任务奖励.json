@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787320241740,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\领取任务奖励.json",
             "savedViewport": {
-                "x": -1834,
-                "y": 91,
-                "zoom": 0.57
+                "x": -3234,
+                "y": 290,
+                "zoom": 0.72
             },
             "filename": "领取任务奖励",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_领取任务奖励": {
@@ -184,7 +181,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 4000,
+        "post_delay": 2000,
         "timeout": 2000,
         "next": [
             "确认任务奖励",
@@ -215,7 +212,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 4000,
+        "post_delay": 2000,
         "timeout": 2000,
         "$__mpe_code": {
             "position": {

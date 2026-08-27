@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787236722582,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\休伯利安.json",
             "savedViewport": {
-                "x": 667,
-                "y": 552,
-                "zoom": 0.75
+                "x": -241,
+                "y": 479,
+                "zoom": 0.72
             },
             "filename": "休伯利安",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_休伯利安": {
@@ -29,13 +26,13 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -687,
-                "y": -313
+                "x": -751,
+                "y": -302
             }
         }
     },
     "休伯利安滑动屏幕第二次": {
-        "max_hit": 5,
+        "max_hit": 8,
         "action": {
             "type": "Swipe",
             "param": {
@@ -58,13 +55,13 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 202,
-                "y": -458
+                "x": 167,
+                "y": -484
             }
         }
     },
     "是否有奖励开始": {
-        "timeout": 3000,
+        "post_delay": 1500,
         "next": [
             "检测是否有奖励",
             "返回主界面开始"
@@ -100,8 +97,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 990,
-                "y": -482
+                "x": 996,
+                "y": -528
             }
         }
     },
@@ -136,7 +133,6 @@
         }
     },
     "点击休伯利安开始": {
-        "timeout": 5000,
         "next": [
             "点击休伯利安",
             "[JumpBack]休伯利安滑动屏幕第二次",
@@ -144,8 +140,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -266,
-                "y": -320
+                "x": -365,
+                "y": -275
             }
         }
     }

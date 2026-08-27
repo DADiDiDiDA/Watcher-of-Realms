@@ -3,17 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787581455362,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\泰坦废墟任务.json",
             "savedViewport": {
-                "x": -2403,
-                "y": -88,
-                "zoom": 0.57
+                "x": -2910,
+                "y": -202,
+                "zoom": 0.62
             },
             "filename": "泰坦废墟任务",
-            "version": "v1.8.1"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_泰坦废墟任务": {
@@ -99,8 +95,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3886,
-                "y": -775
+                "x": 3841,
+                "y": -809
             }
         }
     },
@@ -111,8 +107,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2405,
-                "y": -237
+                "x": 2373,
+                "y": -269
             }
         }
     },
@@ -123,8 +119,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1742,
-                "y": -115
+                "x": 1662,
+                "y": -116
             }
         }
     },
@@ -295,8 +291,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 3872,
-                "y": -205
+                "x": 3808,
+                "y": -237
             }
         }
     },
@@ -453,8 +449,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 5805,
-                "y": -215
+                "x": 5795,
+                "y": -258
             }
         }
     },
@@ -479,8 +475,8 @@
         "post_delay": 6000,
         "$__mpe_code": {
             "position": {
-                "x": 5436,
-                "y": 147
+                "x": 5433,
+                "y": 166
             }
         }
     },
@@ -584,7 +580,7 @@
         "post_delay": 2000,
         "next": [
             "是否已经到关卡界面了-泰坦废墟",
-            "[JumpBack]进入泰坦废墟剩余次数第一次_第二次-泰坦废墟"
+            "[JumpBack]进入泰坦废墟第二次-泰坦废墟"
         ],
         "$__mpe_code": {
             "position": {
@@ -628,11 +624,11 @@
         "$__mpe_code": {
             "position": {
                 "x": 3787,
-                "y": -531
+                "y": -553
             }
         }
     },
-    "进入泰坦废墟剩余次数第一次_第二次-泰坦废墟": {
+    "进入泰坦废墟第二次-泰坦废墟": {
         "recognition": {
             "type": "OCR",
             "param": {

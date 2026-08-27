@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 611,
-                "y": 592,
-                "zoom": 0.76
+                "x": 295,
+                "y": 398,
+                "zoom": 0.72
             },
             "filename": "矿场",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_矿场": {

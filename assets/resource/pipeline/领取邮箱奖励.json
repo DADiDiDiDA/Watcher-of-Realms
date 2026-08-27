@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787320655923,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\领取邮箱奖励.json",
             "savedViewport": {
-                "x": -6122,
-                "y": -366,
-                "zoom": 0.66
+                "x": -7085,
+                "y": -414,
+                "zoom": 0.72
             },
             "filename": "领取邮箱奖励",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_领取邮箱奖励": {
@@ -44,17 +41,17 @@
     },
     "开始点击全部领取邮箱奖励": {
         "next": [
-            "点击全部领取邮箱奖励"
+            "点击全部领取邮箱奖励",
+            "[JumpBack]是邮箱奖励吗_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9865,
-                "y": 937
+                "x": 9837,
+                "y": 908
             }
         }
     },
     "开始领取奖励-邮箱": {
-        "timeout": 4000,
         "next": [
             "[JumpBack]领取邮件奖励开始",
             "开始关闭主菜单界面"
@@ -203,6 +200,32 @@
             "position": {
                 "x": 10804,
                 "y": 695
+            }
+        }
+    },
+    "是邮箱奖励吗_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    919,
+                    17,
+                    260,
+                    573
+                ],
+                "template": [
+                    "邮箱有待领取物品.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 10179,
+                "y": 659
             }
         }
     }

@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787320652825,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\领取签到奖励.json",
             "savedViewport": {
-                "x": -6187,
-                "y": -491,
-                "zoom": 0.66
+                "x": -7055,
+                "y": -493,
+                "zoom": 0.72
             },
             "filename": "领取签到奖励",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "关闭菜单结束-领取签到奖励": {
@@ -30,7 +27,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 10781,
-                "y": 1209
+                "y": 1164
             }
         }
     },
@@ -88,6 +85,7 @@
         }
     },
     "有可领取奖励-签到": {
+        "post_delay": 1500,
         "timeout": 4000,
         "next": [
             "是签到奖励待领取吗",
@@ -95,8 +93,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9179,
-                "y": 969
+                "x": 9190,
+                "y": 919
             }
         }
     },
@@ -156,8 +154,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 11138,
-                "y": 1045
+                "x": 11195,
+                "y": 1146
             }
         }
     },
@@ -237,8 +235,10 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 1500,
         "next": [
-            "第二次关闭签到窗口"
+            "第二次关闭签到窗口",
+            "开始关闭主菜单界面-签到奖励领取"
         ],
         "$__mpe_code": {
             "position": {

@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787360402042,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\装备升级.json",
             "savedViewport": {
-                "x": -7517,
-                "y": 164,
-                "zoom": 0.75
+                "x": -1857,
+                "y": -185,
+                "zoom": 0.54
             },
             "filename": "装备升级",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_装备升级": {
@@ -88,7 +85,6 @@
         }
     },
     "开始检查选择条件是不是正确的": {
-        "timeout": 3000,
         "next": [
             "检查选择条件是不是正确的",
             "[JumpBack]点击条件选择菜单"
@@ -101,7 +97,6 @@
         }
     },
     "开始检测排序是不是正确的": {
-        "timeout": 3000,
         "next": [
             "检测排序是不是正确的",
             "[JumpBack]点击排序选择菜单"
@@ -168,7 +163,7 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6105,
+                "x": 6049,
                 "y": -633
             }
         }
@@ -205,8 +200,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5747,
-                "y": -544
+                "x": 5684,
+                "y": -550
             }
         }
     },
@@ -230,8 +225,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5350,
-                "y": -555
+                "x": 5293,
+                "y": -551
             }
         }
     },
@@ -551,7 +546,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "进入自动强化界面"
+            "进入自动强化界面",
+            "[JumpBack]进入强化界面_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -865,6 +861,32 @@
             "position": {
                 "x": 10930,
                 "y": -70
+            }
+        }
+    },
+    "进入强化界面_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    952,
+                    639,
+                    306,
+                    63
+                ],
+                "expected": [
+                    "强化"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 9843,
+                "y": -330
             }
         }
     }

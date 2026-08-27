@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787320001746,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\每周交易所交易.json",
             "savedViewport": {
-                "x": -2436,
-                "y": 404,
-                "zoom": 0.57
+                "x": -3614,
+                "y": 424,
+                "zoom": 0.72
             },
             "filename": "每周交易所交易",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_每周交易所交易": {
@@ -58,8 +55,8 @@
         "post_delay": 4000,
         "$__mpe_code": {
             "position": {
-                "x": 5726,
-                "y": -474
+                "x": 5765,
+                "y": -499
             }
         }
     },
@@ -100,8 +97,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4661,
-                "y": 69
+                "x": 4542,
+                "y": 72
             }
         }
     },

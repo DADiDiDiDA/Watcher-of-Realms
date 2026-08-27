@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787319874215,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\公会奖励领取.json",
             "savedViewport": {
-                "x": -736,
-                "y": 330,
-                "zoom": 0.66
+                "x": -850,
+                "y": 405,
+                "zoom": 0.57
             },
             "filename": "公会奖励领取",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_公会奖励领取": {
@@ -30,8 +27,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 916,
-                "y": -76
+                "x": 815,
+                "y": -94
             }
         }
     },
@@ -44,8 +41,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1521,
-                "y": -238
+                "x": 1501,
+                "y": -256
             }
         }
     },
@@ -146,8 +143,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1224,
-                "y": -296
+                "x": 1201,
+                "y": -310
             }
         }
     },

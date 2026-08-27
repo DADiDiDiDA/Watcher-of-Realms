@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787320657664,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\魔潮扫荡.json",
             "savedViewport": {
-                "x": -2914,
-                "y": 14,
-                "zoom": 0.66
+                "x": -2699,
+                "y": 173,
+                "zoom": 0.54
             },
             "filename": "魔潮扫荡",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_魔潮扫荡": {
@@ -53,7 +50,7 @@
         }
     },
     "检测魔潮扫荡图标": {
-        "timeout": 2000,
+        "post_delay": 1500,
         "next": [
             "有没有扫荡按键",
             "返回主界面开始"
@@ -89,14 +86,16 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5385,
-                "y": 14
+                "x": 5490,
+                "y": -65
             }
         }
     },
     "确认开始魔潮扫荡": {
         "next": [
-            "确认不使用剩余次数"
+            "确认不使用剩余次数",
+            "[JumpBack]有没有扫荡按键_第二次",
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -281,19 +280,20 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5916,
-                "y": 296
+                "x": 6159,
+                "y": 224
             }
         }
     },
     "领取魔潮扫荡奖励节点": {
         "next": [
-            "领取魔潮奖励"
+            "领取魔潮奖励",
+            "[JumpBack]确认不使用剩余次数_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5648,
-                "y": 182
+                "x": 5827,
+                "y": 31
             }
         }
     },
@@ -340,6 +340,58 @@
             "position": {
                 "x": 3844,
                 "y": -269
+            }
+        }
+    },
+    "确认不使用剩余次数_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    670,
+                    436,
+                    202,
+                    52
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 6135,
+                "y": -56
+            }
+        }
+    },
+    "有没有扫荡按键_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    17,
+                    567,
+                    368,
+                    64
+                ],
+                "expected": [
+                    "扫荡奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 5487,
+                "y": -347
             }
         }
     }

@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787358905709,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 507,
-                "y": -661,
-                "zoom": 0.37
+                "x": 157,
+                "y": -1756,
+                "zoom": 0.65
             },
             "filename": "返回主界面",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "启动游戏": {
@@ -22,7 +19,6 @@
                 "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
             }
         },
-        "timeout": -1,
         "next": [
             "返回主界面启动"
         ],
@@ -54,16 +50,16 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 336,
-                "y": 2564
+                "x": 325,
+                "y": 2500
             }
         }
     },
     "已经到达主界面-任务结束": {
         "$__mpe_code": {
             "position": {
-                "x": 592,
-                "y": 2233
+                "x": 639,
+                "y": 2218
             }
         }
     },
@@ -139,8 +135,8 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 812,
-                "y": 756
+                "x": 746,
+                "y": 836
             }
         }
     },
@@ -256,6 +252,7 @@
         }
     },
     "检测红色叉号界面": {
+        "max_hit": 10,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -323,13 +320,12 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 827,
-                "y": 1367
+                "x": 746,
+                "y": 1260
             }
         }
     },
     "直接执行任务": {
-        "timeout": -1,
         "next": [
             "返回主界面启动"
         ],
@@ -353,7 +349,8 @@
             "检测是否在主界面",
             "[JumpBack]左上角返回箭头图标",
             "[JumpBack]战斗结束领取奖励_第二次",
-            "[JumpBack]连续点击Esc尝试中途退出"
+            "[JumpBack]连续点击Esc尝试中途退出",
+            "无法解决的界面"
         ],
         "$__mpe_code": {
             "position": {
@@ -419,13 +416,13 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 1246,
-                "y": 1332
+                "x": 1104,
+                "y": 1309
             }
         }
     },
     "连续点击Esc尝试中途退出": {
-        "max_hit": 20,
+        "max_hit": 10,
         "action": {
             "type": "ClickKey",
             "param": {
@@ -440,6 +437,17 @@
             "position": {
                 "x": 276,
                 "y": 3066
+            }
+        }
+    },
+    "无法解决的界面": {
+        "action": {
+            "type": "Screencap"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -416,
+                "y": 1612
             }
         }
     }

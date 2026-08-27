@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 1333,
-                "y": 747,
-                "zoom": 0.67
+                "x": -520,
+                "y": 447,
+                "zoom": 0.54
             },
             "filename": "刷体力",
-            "version": "v1.8.1"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_刷体力": {
@@ -613,8 +613,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -2127,
-                "y": -346
+                "x": -2637,
+                "y": -433
             }
         }
     },
@@ -1056,8 +1056,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 3781,
-                "y": -847
+                "x": 3882,
+                "y": -903
             }
         }
     },

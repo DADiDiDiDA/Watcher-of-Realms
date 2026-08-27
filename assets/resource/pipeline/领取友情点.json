@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -126,
-                "y": 330,
-                "zoom": 0.57
+                "x": -810,
+                "y": 281,
+                "zoom": 0.72
             },
             "filename": "领取友情点",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_领取友情点": {
@@ -49,8 +49,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1262,
-                "y": -205
+                "x": 1227,
+                "y": -198
             }
         }
     },
@@ -119,8 +119,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1028,
-                "y": 151
+                "x": 803,
+                "y": 134
             }
         }
     },

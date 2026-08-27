@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787320259572,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\领取商城免费礼包.json",
             "savedViewport": {
-                "x": -2405,
-                "y": -164,
-                "zoom": 0.5
+                "x": -3134,
+                "y": -503,
+                "zoom": 0.54
             },
             "filename": "领取商城免费礼包",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_领取商城免费礼包": {
@@ -46,8 +43,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3674,
-                "y": 164
+                "x": 3623,
+                "y": 151
             }
         }
     },
@@ -91,8 +88,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4681,
-                "y": 78
+                "x": 4600,
+                "y": -27
             }
         }
     },
@@ -136,8 +133,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4426,
-                "y": 377
+                "x": 4248,
+                "y": 98
             }
         }
     },
@@ -704,7 +701,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "确认每日限购物品奖励"
+            "确认每日限购物品奖励",
+            "[JumpBack]购买每日限购物品_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -766,8 +764,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4044,
-                "y": 47
+                "x": 3978,
+                "y": 83
             }
         }
     },
@@ -903,12 +901,65 @@
         },
         "post_delay": 2000,
         "next": [
-            "收取奖励"
+            "收取奖励",
+            "[JumpBack]领取英灵召唤包奖励_第二次"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 7859,
                 "y": 947
+            }
+        }
+    },
+    "购买每日限购物品_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    389,
+                    588,
+                    76,
+                    50
+                ],
+                "expected": [
+                    "免费"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 8351,
+                "y": 981
+            }
+        }
+    },
+    "领取英灵召唤包奖励_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    398,
+                    596,
+                    86,
+                    47
+                ],
+                "expected": [
+                    "免费"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 8098,
+                "y": 976
             }
         }
     }

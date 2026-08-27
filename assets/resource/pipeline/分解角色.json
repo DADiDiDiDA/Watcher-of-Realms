@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1787237433265,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\分解角色.json",
             "savedViewport": {
-                "x": -3012,
-                "y": 33,
-                "zoom": 0.86
+                "x": -4078,
+                "y": 174,
+                "zoom": 0.75
             },
             "filename": "分解角色",
-            "version": "v1.8.0"
+            "version": "v1.9.0"
         }
     },
     "$__mpe_external_返回主界面开始_分解角色": {
@@ -30,22 +27,22 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3511,
-                "y": 367
+                "x": 3222,
+                "y": 379
             }
         }
     },
     "开始选择一星二星三星角色": {
         "timeout": 2000,
         "next": [
-            "选择一星二星三星角色",
+            "[JumpBack]选择一星二星三星角色",
             "开始遣散角色",
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4472,
-                "y": 81
+                "x": 4406,
+                "y": -150
             }
         }
     },
@@ -73,8 +70,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4803,
-                "y": 26
+                "x": 4836,
+                "y": -196
             }
         }
     },
@@ -102,8 +99,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5437,
-                "y": -26
+                "x": 5500,
+                "y": -247
             }
         }
     },
@@ -115,8 +112,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5109,
-                "y": 29
+                "x": 5177,
+                "y": -182
             }
         }
     },
@@ -145,8 +142,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4159,
-                "y": 72
+                "x": 4009,
+                "y": -93
             }
         }
     },
@@ -175,8 +172,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3825,
-                "y": 257
+                "x": 3615,
+                "y": 108
             }
         }
     },
@@ -199,13 +196,10 @@
             "type": "Click"
         },
         "post_delay": 2000,
-        "next": [
-            "开始选择一星二星三星角色"
-        ],
         "$__mpe_code": {
             "position": {
-                "x": 4766,
-                "y": -272
+                "x": 4758,
+                "y": -431
             }
         }
     },
@@ -233,8 +227,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6247,
-                "y": -17
+                "x": 6202,
+                "y": -182
             }
         }
     },
@@ -245,8 +239,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5793,
-                "y": 32
+                "x": 5805,
+                "y": -164
             }
         }
     },
@@ -271,8 +265,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 4068,
-                "y": 461
+                "x": 3904,
+                "y": 224
             }
         }
     },
@@ -297,8 +291,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 4549,
-                "y": 359
+                "x": 4304,
+                "y": 80
             }
         }
     }
