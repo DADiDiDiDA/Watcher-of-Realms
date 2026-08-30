@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -3134,
-                "y": -503,
-                "zoom": 0.54
+                "x": -4050,
+                "y": 199,
+                "zoom": 0.75
             },
             "filename": "领取商城免费礼包",
-            "version": "v1.9.0"
+            "version": "v1.9.1"
         }
     },
     "$__mpe_external_返回主界面开始_领取商城免费礼包": {
@@ -327,8 +327,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7489,
-                "y": 933
+                "x": 7482,
+                "y": 930
             }
         }
     },
@@ -356,8 +356,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8132,
-                "y": 716
+                "x": 8128,
+                "y": 663
             }
         }
     },
@@ -440,7 +440,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "购买每日限购物品"
+            "购买每日限购物品",
+            "[JumpBack]检查W币商城二级界面_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -792,6 +793,7 @@
         },
         "post_delay": 2000,
         "next": [
+            "[JumpBack]进入英灵召唤包界面_第二次",
             "开始领取英灵召唤包奖励"
         ],
         "$__mpe_code": {
@@ -832,12 +834,13 @@
         },
         "post_delay": 2000,
         "next": [
-            "确认领取免费体力"
+            "确认领取免费体力",
+            "[JumpBack]领取免费体力_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6790,
-                "y": 449
+                "x": 6654,
+                "y": 446
             }
         }
     },
@@ -906,8 +909,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7859,
-                "y": 947
+                "x": 7764,
+                "y": 935
             }
         }
     },
@@ -958,8 +961,104 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 8098,
-                "y": 976
+                "x": 8087,
+                "y": 949
+            }
+        }
+    },
+    "检查W币商城二级界面_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    429,
+                    49,
+                    688,
+                    47
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 8010,
+                "y": 1497
+            }
+        }
+    },
+    "领取免费体力_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1107,
+                    112,
+                    142,
+                    63
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -34,
+                    16,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 6935,
+                "y": 571
+            }
+        }
+    },
+    "进入英灵召唤包界面_第二次": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    529,
+                    47,
+                    714,
+                    47
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 7422,
+                "y": 623
             }
         }
     }

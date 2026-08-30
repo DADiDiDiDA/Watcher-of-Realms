@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 157,
-                "y": -1756,
-                "zoom": 0.65
+                "x": 639,
+                "y": -619,
+                "zoom": 0.5
             },
             "filename": "返回主界面",
-            "version": "v1.9.0"
+            "version": "v1.9.1"
         }
     },
     "启动游戏": {
@@ -50,8 +50,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 325,
-                "y": 2500
+                "x": 314,
+                "y": 2548
             }
         }
     },
@@ -59,7 +59,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 639,
-                "y": 2218
+                "y": 2124
             }
         }
     },
@@ -246,8 +246,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 332,
-                "y": 2169
+                "x": 328,
+                "y": 2090
             }
         }
     },
@@ -347,6 +347,7 @@
             "[JumpBack]是不是点击关闭的活动",
             "[JumpBack]点击关闭右侧的主菜单按钮_返回主界面",
             "检测是否在主界面",
+            "[JumpBack]是不是有待领取界面",
             "[JumpBack]左上角返回箭头图标",
             "[JumpBack]战斗结束领取奖励_第二次",
             "[JumpBack]连续点击Esc尝试中途退出",
@@ -444,10 +445,63 @@
         "action": {
             "type": "Screencap"
         },
+        "next": [
+            "检测是否在主界面"
+        ],
         "$__mpe_code": {
             "position": {
                 "x": -416,
                 "y": 1612
+            }
+        }
+    },
+    "是不是有待领取界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    516,
+                    67,
+                    254,
+                    83
+                ],
+                "expected": [
+                    "获得"
+                ]
+            }
+        },
+        "next": [
+            "确认领取奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 318,
+                "y": 2331
+            }
+        }
+    },
+    "确认领取奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    486,
+                    507,
+                    409,
+                    193
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 585,
+                "y": 2370
             }
         }
     }
