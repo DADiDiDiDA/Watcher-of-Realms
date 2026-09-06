@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -3259,
-                "y": -94,
-                "zoom": 0.57
+                "x": -2161,
+                "y": 422,
+                "zoom": 0.49
             },
             "filename": "通行证奖励领取",
-            "version": "v1.9.0"
+            "version": "v1.9.2"
         }
     },
     "$__mpe_external_返回主界面开始_通行证奖励领取": {
@@ -425,7 +425,8 @@
         "timeout": 3000,
         "next": [
             "金龙通行证任务领取",
-            "[JumpBack]点击金龙通行证有奖励的任务_第二次"
+            "[JumpBack]点击金龙通行证有奖励的任务_第二次",
+            "开始进入精灵通行证"
         ],
         "$__mpe_code": {
             "position": {
@@ -435,6 +436,7 @@
         }
     },
     "点击金龙通行证有奖励的任务_第二次": {
+        "max_hit": 5,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -634,6 +636,7 @@
         },
         "post_delay": 2000,
         "next": [
+            "[JumpBack]进入金龙通行证_第二次",
             "进入金龙通行证日任务"
         ],
         "$__mpe_code": {
@@ -763,6 +766,33 @@
             "position": {
                 "x": 6622,
                 "y": -1144
+            }
+        }
+    },
+    "进入金龙通行证_第二次": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    67,
+                    84,
+                    193,
+                    463
+                ],
+                "expected": [
+                    "金龙"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 5282,
+                "y": -1007
             }
         }
     }

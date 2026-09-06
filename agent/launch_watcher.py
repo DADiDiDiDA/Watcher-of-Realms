@@ -39,7 +39,41 @@ def close_game_process():
         print(f"❌ 关闭进程异常: {e}")
         return False
 
+def wait_for_launcher_window(timeout=60):
+    """等待启动器窗口出现"""
+    print(f"⏳ 等待启动器窗口加载（超时 {timeout} 秒）...")
+    start_time = time.time()
+    last_progress = 0
+    
+    while time.time() - start_time < timeout:
+        try:
+            windows = gw.getWindowsWithTitle(WINDOW_TITLE_KEYWORD)
+            if windows:
+                win = windows[0]
+                # 如果窗口存在，尝试激活它
+                if win.isMinimized:
+                    win.restore()
+                win.activate()
+                time.sleep(1)
+                print(f"✅ 已激活窗口: {win.title}")
+                return True
+        except Exception as e:
+            print(f"⚠️ 检查窗口时出错: {e}")
+        
+        # 每5秒输出进度
+        elapsed = int(time.time() - start_time)
+        if elapsed - last_progress >= 5:
+            print(f"⏳ 等待启动器... {elapsed}秒")
+            last_progress = elapsed
+        
+        # 每1秒检查一次
+        time.sleep(1)
+    
+    print(f"⚠️ 等待启动器窗口超时（{timeout} 秒）")
+    return False
+
 def activate_launcher_window():
+    """激活启动器窗口（已由 wait_for_launcher_window 处理）"""
     try:
         windows = gw.getWindowsWithTitle(WINDOW_TITLE_KEYWORD)
         if windows:
@@ -85,12 +119,18 @@ def launch_game():
     subprocess.Popen([LAUNCHER_PATH])
     
     print("⏳ 等待启动器加载...")
-    time.sleep(5)
     
-    if not activate_launcher_window():
-        print("⚠️ 未找到启动器窗口，将尝试直接识别...")
+    # 等待启动器窗口出现（最多等待60秒）
+    if not wait_for_launcher_window(timeout=60):
+        print("⚠️ 启动器窗口未出现，将尝试直接识别按钮...")
+        # 额外等待几秒再尝试识别按钮
+        time.sleep(3)
+    else:
+        # 窗口激活后，再等待1秒让界面稳定
+        time.sleep(1)
     
-    for attempt in range(1, 4):
+    # 尝试点击按钮
+    for attempt in range(1, 6):  # 增加到5次尝试
         print(f"🎯 第 {attempt} 次尝试点击开始按钮...")
         if find_and_click_button():
             print("🎮 游戏启动指令已发出！")

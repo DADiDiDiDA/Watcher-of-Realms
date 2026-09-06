@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 639,
-                "y": -619,
-                "zoom": 0.5
+                "x": 878,
+                "y": -733,
+                "zoom": 0.66
             },
             "filename": "返回主界面",
-            "version": "v1.9.1"
+            "version": "v1.9.2"
         }
     },
     "启动游戏": {
@@ -276,8 +276,8 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 375,
-                "y": 450
+                "x": 366,
+                "y": 518
             }
         }
     },
@@ -337,9 +337,10 @@
         }
     },
     "返回主界面启动": {
-        "timeout": 4000,
+        "timeout": 300000,
         "next": [
             "[JumpBack]是不是新角色展馆",
+            "[JumpBack]是不是启动器",
             "[JumpBack]检测红色叉号界面",
             "[JumpBack]是不是按Esc按快了",
             "[JumpBack]进入游戏",
@@ -349,9 +350,7 @@
             "检测是否在主界面",
             "[JumpBack]是不是有待领取界面",
             "[JumpBack]左上角返回箭头图标",
-            "[JumpBack]战斗结束领取奖励_第二次",
-            "[JumpBack]连续点击Esc尝试中途退出",
-            "无法解决的界面"
+            "[JumpBack]战斗结束领取奖励_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -422,39 +421,6 @@
             }
         }
     },
-    "连续点击Esc尝试中途退出": {
-        "max_hit": 10,
-        "action": {
-            "type": "ClickKey",
-            "param": {
-                "key": [
-                    4,
-                    111
-                ]
-            }
-        },
-        "post_delay": 3000,
-        "$__mpe_code": {
-            "position": {
-                "x": 276,
-                "y": 3066
-            }
-        }
-    },
-    "无法解决的界面": {
-        "action": {
-            "type": "Screencap"
-        },
-        "next": [
-            "检测是否在主界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -416,
-                "y": 1612
-            }
-        }
-    },
     "是不是有待领取界面": {
         "recognition": {
             "type": "OCR",
@@ -502,6 +468,31 @@
             "position": {
                 "x": 585,
                 "y": 2370
+            }
+        }
+    },
+    "是不是启动器": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1085,
+                    612,
+                    66,
+                    65
+                ],
+                "expected": [
+                    "开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 495,
+                "y": 315
             }
         }
     }
