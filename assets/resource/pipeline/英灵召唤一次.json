@@ -3,20 +3,24 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1789007070494,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\英灵召唤一次.json",
             "savedViewport": {
-                "x": -6911,
-                "y": 376,
-                "zoom": 0.87
+                "x": -3520,
+                "y": 327,
+                "zoom": 0.5
             },
             "filename": "英灵召唤一次",
-            "version": "v1.9.1"
+            "version": "v1.9.3"
         }
     },
     "$__mpe_external_返回主界面开始_英灵召唤一次": {
         "$__mpe_code": {
             "position": {
-                "x": 8249,
-                "y": 276
+                "x": 8557,
+                "y": 410
             }
         }
     },
@@ -74,6 +78,35 @@
             "position": {
                 "x": 7955,
                 "y": -380
+            }
+        }
+    },
+    "开始单次召唤_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    335,
+                    541,
+                    302,
+                    102
+                ],
+                "template": [
+                    "单次英灵召唤.png",
+                    "英灵召唤钻石.png"
+                ],
+                "threshold": [
+                    0.95
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 8785,
+                "y": -495
             }
         }
     },
@@ -295,8 +328,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 8568,
-                "y": -520
+                "x": 8609,
+                "y": -681
             }
         }
     },
@@ -325,16 +358,43 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8606,
-                "y": -235
+                "x": 8742,
+                "y": -162
+            }
+        }
+    },
+    "确定收获召唤角色_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    502,
+                    528,
+                    485,
+                    168
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 9066,
+                "y": -198
             }
         }
     },
     "等待召唤动画结束": {
+        "post_delay": 2000,
         "next": [
             "[JumpBack]确定召唤角色",
             "确定收获召唤角色",
-            "[JumpBack]开始单次召唤_第二次"
+            "[JumpBack]开始单次召唤_第二次",
+            "需要选择召唤目标"
         ],
         "$__mpe_code": {
             "position": {
@@ -484,6 +544,32 @@
             }
         }
     },
+    "退出任务界面的检查_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    3,
+                    2,
+                    88,
+                    54
+                ],
+                "template": [
+                    "矮人超市退出.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 6385,
+                "y": 122
+            }
+        }
+    },
     "选择每日任务界面召唤任务": {
         "recognition": {
             "type": "OCR",
@@ -541,83 +627,28 @@
             }
         }
     },
-    "退出任务界面的检查_第二次": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    3,
-                    2,
-                    88,
-                    54
-                ],
-                "template": [
-                    "矮人超市退出.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "$__mpe_code": {
-            "position": {
-                "x": 6385,
-                "y": 122
-            }
-        }
-    },
-    "开始单次召唤_第二次": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    335,
-                    541,
-                    302,
-                    102
-                ],
-                "template": [
-                    "单次英灵召唤.png",
-                    "英灵召唤钻石.png"
-                ],
-                "threshold": [
-                    0.95
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 8865,
-                "y": -421
-            }
-        }
-    },
-    "确定收获召唤角色_第二次": {
+    "需要选择召唤目标": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    502,
-                    528,
-                    485,
-                    168
+                    439,
+                    300,
+                    414,
+                    60
                 ],
                 "expected": [
-                    "确定"
+                    "选择"
                 ]
             }
         },
-        "action": {
-            "type": "Click"
-        },
+        "next": [
+            "返回主界面开始"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 8953,
-                "y": -141
+                "x": 8460,
+                "y": 64
             }
         }
     }

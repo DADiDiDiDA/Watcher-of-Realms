@@ -3,13 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1788948916544,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 878,
-                "y": -733,
-                "zoom": 0.66
+                "x": 70,
+                "y": -2723,
+                "zoom": 1.3
             },
             "filename": "返回主界面",
-            "version": "v1.9.2"
+            "version": "v1.9.3"
         }
     },
     "启动游戏": {
@@ -50,8 +54,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 314,
-                "y": 2548
+                "x": 306,
+                "y": 2666
             }
         }
     },
@@ -84,8 +88,33 @@
         "post_delay": 4000,
         "$__mpe_code": {
             "position": {
-                "x": 299,
-                "y": 2783
+                "x": 287,
+                "y": 2997
+            }
+        }
+    },
+    "是不是启动器": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1085,
+                    612,
+                    66,
+                    65
+                ],
+                "expected": [
+                    "开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 391,
+                "y": 276
             }
         }
     },
@@ -164,8 +193,33 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 380,
-                "y": 95
+                "x": 371,
+                "y": -94
+            }
+        }
+    },
+    "是不是有待领取界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    516,
+                    67,
+                    254,
+                    83
+                ],
+                "expected": [
+                    "获得"
+                ]
+            }
+        },
+        "next": [
+            "确认领取奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 303,
+                "y": 2445
             }
         }
     },
@@ -246,8 +300,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 328,
-                "y": 2090
+                "x": 316,
+                "y": 2113
             }
         }
     },
@@ -276,8 +330,8 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 366,
-                "y": 518
+                "x": 364,
+                "y": 454
             }
         }
     },
@@ -303,7 +357,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 323,
-                "y": 1816
+                "y": 1794
             }
         }
     },
@@ -333,6 +387,31 @@
             "position": {
                 "x": -1295,
                 "y": 831
+            }
+        }
+    },
+    "确认领取奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    486,
+                    507,
+                    409,
+                    193
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 593,
+                "y": 2462
             }
         }
     },
@@ -418,81 +497,6 @@
             "position": {
                 "x": 1104,
                 "y": 1309
-            }
-        }
-    },
-    "是不是有待领取界面": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    516,
-                    67,
-                    254,
-                    83
-                ],
-                "expected": [
-                    "获得"
-                ]
-            }
-        },
-        "next": [
-            "确认领取奖励"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 318,
-                "y": 2331
-            }
-        }
-    },
-    "确认领取奖励": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    486,
-                    507,
-                    409,
-                    193
-                ],
-                "expected": [
-                    "确定"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 585,
-                "y": 2370
-            }
-        }
-    },
-    "是不是启动器": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1085,
-                    612,
-                    66,
-                    65
-                ],
-                "expected": [
-                    "开始"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 495,
-                "y": 315
             }
         }
     }

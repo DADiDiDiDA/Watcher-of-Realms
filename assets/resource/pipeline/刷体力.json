@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -520,
-                "y": 447,
-                "zoom": 0.54
+                "x": -1557,
+                "y": 897,
+                "zoom": 0.57
             },
             "filename": "刷体力",
-            "version": "v1.9.0"
+            "version": "v1.10.0"
         }
     },
     "$__mpe_external_返回主界面开始_刷体力": {
@@ -71,32 +71,6 @@
             "position": {
                 "x": 2167,
                 "y": -711
-            }
-        }
-    },
-    "增加扫荡次数": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    871,
-                    303,
-                    68,
-                    58
-                ],
-                "template": [
-                    "体力右边的小加号.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 1500,
-        "$__mpe_code": {
-            "position": {
-                "x": 2875,
-                "y": -934
             }
         }
     },
@@ -188,8 +162,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3496,
-                "y": -1142
+                "x": 3445,
+                "y": -1170
             }
         }
     },
@@ -361,6 +335,7 @@
                 ]
             }
         },
+        "timeout": 60000,
         "next": [
             "扫荡结束确认结果"
         ],
@@ -581,31 +556,6 @@
             }
         }
     },
-    "调整扫荡次数为10": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    303,
-                    248,
-                    150,
-                    52
-                ],
-                "expected": [
-                    "10"
-                ]
-            }
-        },
-        "next": [
-            "开始自动战斗_扫荡"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2888,
-                "y": -1260
-            }
-        }
-    },
     "进入副本选择": {
         "next": [
             "进入副本选择开始",
@@ -683,9 +633,6 @@
                     589,
                     21,
                     16
-                ],
-                "expected": [
-                    "10"
                 ]
             }
         },
@@ -999,8 +946,7 @@
             "type": "Click"
         },
         "next": [
-            "调整扫荡次数为10",
-            "[JumpBack]增加扫荡次数",
+            "调整扫荡次数为最大",
             "[JumpBack]选择扫荡界面_第二次"
         ],
         "$__mpe_code": {
@@ -1011,6 +957,7 @@
         }
     },
     "选择扫荡界面_第二次": {
+        "max_hit": 2,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -1030,8 +977,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2542,
-                "y": -1341
+                "x": 2689,
+                "y": -973
             }
         }
     },
@@ -1056,8 +1003,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 3882,
-                "y": -903
+                "x": 3851,
+                "y": -837
             }
         }
     },
@@ -1221,6 +1168,65 @@
             "position": {
                 "x": 4570,
                 "y": -850
+            }
+        }
+    },
+    "调整扫荡次数为最大": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    943,
+                    256,
+                    89,
+                    116
+                ],
+                "expected": [
+                    "MAX",
+                    "最大"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "[JumpBack]调整扫荡次数为最大_第二次",
+            "开始自动战斗_扫荡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2883,
+                "y": -1268
+            }
+        }
+    },
+    "调整扫荡次数为最大_第二次": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    943,
+                    256,
+                    89,
+                    116
+                ],
+                "expected": [
+                    "MAX",
+                    "最大"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 3244,
+                "y": -1474
             }
         }
     }
