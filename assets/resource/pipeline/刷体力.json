@@ -5,7 +5,7 @@
             "coordinateMode": "absolute-v1",
             "savedViewport": {
                 "x": -1557,
-                "y": 897,
+                "y": 1030,
                 "zoom": 0.57
             },
             "filename": "刷体力",
@@ -212,6 +212,7 @@
         "next": [
             "[JumpBack]进入扫荡战斗配置",
             "进入自动战斗配置",
+            "[JumpBack]返回上一级-扫荡体力不足_第二次",
             "[JumpBack]开始检测哪一关完成了_第二次"
         ],
         "$__mpe_code": {
@@ -625,6 +626,7 @@
         }
     },
     "进入扫荡战斗配置": {
+        "max_hit": 1,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1079,8 +1081,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3823,
-                "y": -1369
+                "x": 3776,
+                "y": -1421
             }
         }
     },
@@ -1089,10 +1091,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    1133,
-                    35,
-                    136,
-                    74
+                    1087,
+                    24,
+                    190,
+                    88
                 ],
                 "template": [
                     "红色X号.png"
@@ -1104,8 +1106,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 4215,
-                "y": -1389
+                "x": 4162,
+                "y": -1591
             }
         }
     },
@@ -1132,8 +1134,8 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 1528,
-                "y": -230
+                "x": 1313,
+                "y": -56
             }
         }
     },
@@ -1227,6 +1229,31 @@
             "position": {
                 "x": 3244,
                 "y": -1474
+            }
+        }
+    },
+    "返回上一级-扫荡体力不足_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1087,
+                    24,
+                    190,
+                    88
+                ],
+                "template": [
+                    "红色X号.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1466,
+                "y": -264
             }
         }
     }

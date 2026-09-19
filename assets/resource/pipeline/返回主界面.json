@@ -3,17 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1788948916544,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 70,
-                "y": -2723,
-                "zoom": 1.3
+                "x": 278,
+                "y": 120,
+                "zoom": 0.66
             },
             "filename": "返回主界面",
-            "version": "v1.9.3"
+            "version": "v1.10.1"
         }
     },
     "启动游戏": {
@@ -108,13 +104,13 @@
                 ]
             }
         },
-        "action": {
-            "type": "Click"
-        },
+        "next": [
+            "任务失败结束"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 391,
-                "y": 276
+                "x": 367,
+                "y": 214
             }
         }
     },
@@ -497,6 +493,17 @@
             "position": {
                 "x": 1104,
                 "y": 1309
+            }
+        }
+    },
+    "任务失败结束": {
+        "action": {
+            "type": "StopTask"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 627,
+                "y": 214
             }
         }
     }
