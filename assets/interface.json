@@ -5,7 +5,7 @@
     "contact": "",
     "license": "MIT",
     "welcome": "注意看任务介绍！！！！！！",
-    "version": "1.4.3",
+    "version": "1.4.2",
 
     "controller": [
         {
@@ -27,8 +27,8 @@
     ],
 
     "pretask": {
-        "exec": "C:\\Users\\Administrator\\AppData\\Local\\Python\\bin\\python.exe",
-        "args": ["D:\\Application\\Automate\\My-maawork\\MFAAWatcher-of-Realms\\agent\\launch_via_launcher.py"],
+        "exec": "D:\\Application\\Automate\\Git-Maawork\\Watcher-of-Realms\\assets\\resource\\base\\python\\python.exe",
+        "args": ["..\\..\\agent\\launch_via_launcher.py"],
         "controller": ["桌面端"]
     },
 
