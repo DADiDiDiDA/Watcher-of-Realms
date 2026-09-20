@@ -68,8 +68,41 @@ def wait_for_launcher_window(timeout=60):
     print(f"⚠️ 等待启动器窗口超时（{timeout} 秒）")
     return False
 
+# ---------- 强制激活启动器窗口 ----------
+def activate_launcher_window():
+    """在截图前把启动器窗口拉到最前，确保找图能看到它。"""
+    try:
+        windows = gw.getWindowsWithTitle(WINDOW_TITLE_KEYWORD)
+        if not windows:
+            print(f"⚠️ 未找到标题含 '{WINDOW_TITLE_KEYWORD}' 的窗口")
+            return False
+
+        win = windows[0]
+        if win.isMinimized:
+            win.restore()
+            time.sleep(0.3)
+
+        # 多次尝试激活，避免被其他窗口抢占
+        for _ in range(3):
+            try:
+                win.activate()
+            except Exception:
+                pass
+            time.sleep(0.3)
+
+        print(f"✅ 已强制激活窗口: {win.title}")
+        # 给窗口置顶留一点时间
+        time.sleep(0.5)
+        return True
+    except Exception as e:
+        print(f"⚠️ 激活窗口失败: {e}")
+        return False
+
 # ---------- 点击开始按钮 ----------
 def find_and_click_button():
+    # 先强制激活启动器窗口，确保它在最前
+    activate_launcher_window()
+
     try:
         button_pos = pyautogui.locateCenterOnScreen(
             BUTTON_IMAGE,

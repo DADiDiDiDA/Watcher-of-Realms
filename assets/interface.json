@@ -27,8 +27,8 @@
     ],
 
     "pretask": {
-        "exec": "D:\\Application\\Automate\\Git-Maawork\\Watcher-of-Realms\\assets\\resource\\base\\python\\python.exe",
-        "args": ["..\\..\\agent\\launch_via_launcher.py"],
+        "exec": "C:\\Users\\Administrator\\AppData\\Local\\Python\\bin\\python.exe",
+        "args": ["D:\\Application\\Automate\\Git-Maawork\\Watcher-of-Realms\\agent\\launch_via_launcher.py"],
         "controller": ["桌面端"]
     },
 

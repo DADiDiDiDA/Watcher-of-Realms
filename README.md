@@ -17,11 +17,13 @@ pip install pyautogui pygetwindow psutil opencv-python
 
 
 
-需要修改的东西只有两处（每次更新都要重改：
+需要修改的东西只有三处（每次更新都要重改：
 
-agent\\launch\_via\_launcher.py 里的 LAUNCHER\_PATH（沐瞳启动器实际路径）
+pretask.exec → 改成目标电脑的 Python 路径
 
-assets\\interface.json 里的 pretask.exec（便携版 Python 的绝对路径，反正在打包的文件夹里有）
+pretask.args → 改成目标电脑的脚本路径
+
+agent\\launch\_via\_launcher.py 里的 LAUNCHER\_PATH → 改成目标电脑的启动器路径
 
 
 
