@@ -126,7 +126,8 @@
             "name": "🐉 公会巨龙",
             "entry": "工会巨龙任务开始",
             "default_check": true,
-            "description": "需要昨日挑战过！只会挑战昨日挑战的难度"
+            "description": "挑战两次巨龙",
+            "option": ["巨龙第一次难度", "巨龙第二次难度"]
         },
         {
             "name": "📋 领取任务奖励第一次",
@@ -268,6 +269,82 @@
                     "pipeline_override": {
                         "返回主界面开始": {
                             "next": ["启动游戏"]
+                        }
+                    }
+                }
+            ]
+        },
+        "巨龙第一次难度": {
+            "type": "select",
+            "label": "巨龙第一次难度",
+            "description": "选择公会巨龙第一次挑战的难度",
+            "default_case": "first_nightmare_3",
+            "cases": [
+                {
+                    "name": "first_nightmare_3",
+                    "label": "噩梦Ⅲ",
+                    "description": "第一次挑战噩梦Ⅲ",
+                    "pipeline_override": {
+                        "开始选择打什么难度第一次-巨龙遗迹": {
+                            "next": ["挑战难度：噩梦Ⅲ"]
+                        }
+                    }
+                },
+                {
+                    "name": "first_nightmare_4",
+                    "label": "噩梦IV",
+                    "description": "第一次挑战噩梦IV",
+                    "pipeline_override": {
+                        "开始选择打什么难度第一次-巨龙遗迹": {
+                            "next": ["挑战难度：噩梦IV"]
+                        }
+                    }
+                },
+                {
+                    "name": "first_abyss_1",
+                    "label": "深渊I",
+                    "description": "第一次挑战深渊I",
+                    "pipeline_override": {
+                        "开始选择打什么难度第一次-巨龙遗迹": {
+                            "next": ["挑战难度：深渊I"]
+                        }
+                    }
+                }
+            ]
+        },
+        "巨龙第二次难度": {
+            "type": "select",
+            "label": "巨龙第二次难度",
+            "description": "选择公会巨龙第二次挑战的难度",
+            "default_case": "second_nightmare_4",
+            "cases": [
+                {
+                    "name": "second_nightmare_3",
+                    "label": "噩梦Ⅲ",
+                    "description": "第二次挑战噩梦Ⅲ",
+                    "pipeline_override": {
+                        "开始选择打什么难度第二次-巨龙遗迹": {
+                            "next": ["挑战难度：噩梦Ⅲ"]
+                        }
+                    }
+                },
+                {
+                    "name": "second_nightmare_4",
+                    "label": "噩梦IV",
+                    "description": "第二次挑战噩梦IV",
+                    "pipeline_override": {
+                        "开始选择打什么难度第二次-巨龙遗迹": {
+                            "next": ["挑战难度：噩梦IV"]
+                        }
+                    }
+                },
+                {
+                    "name": "second_abyss_1",
+                    "label": "深渊I",
+                    "description": "第二次挑战深渊I",
+                    "pipeline_override": {
+                        "开始选择打什么难度第二次-巨龙遗迹": {
+                            "next": ["挑战难度：深渊I"]
                         }
                     }
                 }

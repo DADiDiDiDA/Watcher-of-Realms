@@ -4,8 +4,8 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -2190,
-                "y": 165,
+                "x": -2616,
+                "y": 330,
                 "zoom": 0.66
             },
             "filename": "领取商城免费礼包",
@@ -86,13 +86,14 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4326,
-                "y": -346
+                "x": 4338,
+                "y": -404
             }
         }
     },
     "在商城寻找奖励图标": {
         "next": [
+            "[JumpBack]有需要关闭的奖励弹窗",
             "[JumpBack]在商城大类型栏目寻找奖励图标第一次",
             "[JumpBack]未找到奖励图标-下滑屏幕",
             "寻找每日礼包结束"
@@ -222,10 +223,11 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 5207,
-                "y": -777
+                "x": 5171,
+                "y": -850
             }
         }
     },
@@ -247,10 +249,11 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 5189,
-                "y": -572
+                "x": 5192,
+                "y": -596
             }
         }
     },
@@ -279,7 +282,8 @@
         "next": [
             "领取每日免费体力-",
             "领取每日免费召唤礼包",
-            "购买好运商品"
+            "购买好运商品",
+            "[JumpBack]在商城寻找奖励图标横分类选择_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -327,8 +331,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 4378,
-                "y": 122
+                "x": 4339,
+                "y": 137
             }
         }
     },
@@ -389,6 +393,60 @@
             "position": {
                 "x": 4748,
                 "y": 167
+            }
+        }
+    },
+    "有需要关闭的奖励弹窗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    583,
+                    614,
+                    123,
+                    102
+                ],
+                "expected": [
+                    "关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3907,
+                "y": -686
+            }
+        }
+    },
+    "在商城寻找奖励图标横分类选择_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    303,
+                    53,
+                    968,
+                    37
+                ],
+                "template": [
+                    "待领取图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 5203,
+                "y": -78
             }
         }
     }

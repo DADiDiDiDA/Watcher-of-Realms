@@ -15,9 +15,7 @@
 
 pip install pyautogui pygetwindow psutil opencv-python
 
-
-
-需要修改的东西只有三处（每次更新都要重改：
+需要修改的东西只有三处（每次更新都要重改；如果只用模拟器不用管）：
 
 pretask.exec → 改成目标电脑的 Python 路径
 
