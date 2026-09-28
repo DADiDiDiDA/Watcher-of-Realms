@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 295,
-                "y": 398,
-                "zoom": 0.72
+                "x": 590,
+                "y": 288,
+                "zoom": 0.66
             },
             "filename": "矿场",
-            "version": "v1.9.0"
+            "version": "v2.0.0"
         }
     },
     "$__mpe_external_返回主界面开始_矿场": {
@@ -85,7 +85,7 @@
     "点击矿场": {
         "next": [
             "点击矿场开始",
-            "[JumpBack]返回主界面开始"
+            "[JumpBack]需要返回主界面"
         ],
         "$__mpe_code": {
             "position": {
@@ -126,6 +126,18 @@
             "position": {
                 "x": 298,
                 "y": -533
+            }
+        }
+    },
+    "需要返回主界面": {
+        "max_hit": 5,
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -142,
+                "y": 89
             }
         }
     }

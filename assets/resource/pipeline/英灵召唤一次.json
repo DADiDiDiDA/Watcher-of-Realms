@@ -3,17 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1789007070494,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Tide-Watcher\\assets\\resource\\pipeline\\英灵召唤一次.json",
             "savedViewport": {
-                "x": -3520,
-                "y": 327,
-                "zoom": 0.5
+                "x": -4596,
+                "y": 346,
+                "zoom": 0.66
             },
             "filename": "英灵召唤一次",
-            "version": "v1.9.3"
+            "version": "v2.0.0"
         }
     },
     "$__mpe_external_返回主界面开始_英灵召唤一次": {
@@ -25,15 +21,14 @@
         }
     },
     "单次召唤开始": {
-        "timeout": 3000,
         "next": [
             "开始单次召唤",
-            "返回主界面开始"
+            "[JumpBack]疑似是保底召唤召唤_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7669,
-                "y": -153
+                "x": 7734,
+                "y": -358
             }
         }
     },
@@ -76,8 +71,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7955,
-                "y": -380
+                "x": 8089,
+                "y": -392
             }
         }
     },
@@ -105,8 +100,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 8785,
-                "y": -495
+                "x": 9111,
+                "y": -581
             }
         }
     },
@@ -328,8 +323,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 8609,
-                "y": -681
+                "x": 8895,
+                "y": -767
             }
         }
     },
@@ -358,8 +353,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8742,
-                "y": -162
+                "x": 9038,
+                "y": -266
             }
         }
     },
@@ -383,8 +378,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 9066,
-                "y": -198
+                "x": 9392,
+                "y": -292
             }
         }
     },
@@ -398,8 +393,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8257,
-                "y": -342
+                "x": 8439,
+                "y": -482
             }
         }
     },
@@ -489,6 +484,7 @@
         }
     },
     "进入英灵召唤界面_第二次": {
+        "max_hit": 10,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -647,8 +643,42 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8460,
-                "y": 64
+                "x": 8714,
+                "y": -116
+            }
+        }
+    },
+    "疑似是保底召唤召唤_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1,
+                    152,
+                    61,
+                    177
+                ],
+                "template": [
+                    "蓝色召唤水晶图标.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    57,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 8201,
+                "y": -118
             }
         }
     }

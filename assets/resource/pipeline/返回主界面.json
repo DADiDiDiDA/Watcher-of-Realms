@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 278,
-                "y": 120,
-                "zoom": 0.66
+                "x": 473,
+                "y": -1076,
+                "zoom": 0.5
             },
             "filename": "返回主界面",
             "version": "v1.10.1"
@@ -63,7 +63,7 @@
             }
         }
     },
-    "战斗结束领取奖励_第二次": {
+    "战斗结束领取奖励_返回主界面": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -425,7 +425,7 @@
             "检测是否在主界面",
             "[JumpBack]是不是有待领取界面",
             "[JumpBack]左上角返回箭头图标",
-            "[JumpBack]战斗结束领取奖励_第二次"
+            "[JumpBack]战斗结束领取奖励_返回主界面"
         ],
         "$__mpe_code": {
             "position": {
