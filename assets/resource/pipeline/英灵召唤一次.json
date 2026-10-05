@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -4596,
-                "y": 346,
-                "zoom": 0.66
+                "x": -3285,
+                "y": 128,
+                "zoom": 0.62
             },
             "filename": "英灵召唤一次",
-            "version": "v2.0.0"
+            "version": "v2.0.6"
         }
     },
     "$__mpe_external_返回主界面开始_英灵召唤一次": {
@@ -17,7 +17,13 @@
             "position": {
                 "x": 8557,
                 "y": 410
-            }
+            },
+            "extra_positions": [
+                {
+                    "x": 6616,
+                    "y": 529
+                }
+            ]
         }
     },
     "单次召唤开始": {
@@ -531,7 +537,8 @@
         "post_delay": 2000,
         "next": [
             "进入英灵召唤界面",
-            "[JumpBack]退出任务界面的检查_第二次"
+            "[JumpBack]退出任务界面的检查_第二次",
+            "[JumpBack]有新的活动弹窗-返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -679,6 +686,18 @@
             "position": {
                 "x": 8201,
                 "y": -118
+            }
+        }
+    },
+    "有新的活动弹窗-返回主界面开始": {
+        "max_hit": 1,
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6281,
+                "y": 474
             }
         }
     }
