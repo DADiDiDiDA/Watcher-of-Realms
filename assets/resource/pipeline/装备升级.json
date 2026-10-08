@@ -3,13 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1791425236290,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Watcher-of-Realms\\assets\\resource\\pipeline\\装备升级.json",
             "savedViewport": {
-                "x": -1857,
-                "y": -185,
-                "zoom": 0.54
+                "x": -4807,
+                "y": -16,
+                "zoom": 0.5
             },
             "filename": "装备升级",
-            "version": "v1.9.0"
+            "version": "v2.0.7"
         }
     },
     "$__mpe_external_返回主界面开始_装备升级": {
@@ -133,8 +137,35 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 10673,
-                "y": 115
+                "x": 11021,
+                "y": 612
+            }
+        }
+    },
+    "开始装备强化_第二次": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    678,
+                    482,
+                    189,
+                    52
+                ],
+                "expected": [
+                    "自动强化"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 11516,
+                "y": 475
             }
         }
     },
@@ -390,15 +421,41 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
+        "post_delay": 1000,
         "next": [
             "[JumpBack]自动强化选择4级别_第二次",
             "开始装备强化"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 10241,
-                "y": 31
+                "x": 10685,
+                "y": 386
+            }
+        }
+    },
+    "自动强化选择4级别_第二次": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    377,
+                    225,
+                    536,
+                    115
+                ],
+                "template": [
+                    "装备强化等级4.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 11027,
+                "y": 181
             }
         }
     },
@@ -556,6 +613,32 @@
             }
         }
     },
+    "进入强化界面_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    952,
+                    639,
+                    306,
+                    63
+                ],
+                "expected": [
+                    "强化"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 9843,
+                "y": -330
+            }
+        }
+    },
     "进入自动强化界面": {
         "recognition": {
             "type": "OCR",
@@ -576,8 +659,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "自动强化选择4级别",
-            "[JumpBack]进入自动强化界面_错误处理"
+            "[JumpBack]进入自动强化界面_错误处理",
+            "自动强化选择16级别"
         ],
         "$__mpe_code": {
             "position": {
@@ -607,8 +690,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 10205,
-                "y": 395
+                "x": 10233,
+                "y": 70
             }
         }
     },
@@ -810,7 +893,37 @@
             }
         }
     },
-    "自动强化选择4级别_第二次": {
+    "自动强化选择8级别": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    377,
+                    225,
+                    536,
+                    115
+                ],
+                "template": [
+                    "装备强化等级8.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "[JumpBack]自动强化选择8级别_第二次",
+            "自动强化选择4级别"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 10768,
+                "y": -181
+            }
+        }
+    },
+    "自动强化选择8级别_第二次": {
         "max_hit": 2,
         "recognition": {
             "type": "TemplateMatch",
@@ -822,71 +935,130 @@
                     115
                 ],
                 "template": [
-                    "装备强化等级4.png"
+                    "装备强化等级8.png"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
+        "focus": "",
         "$__mpe_code": {
             "position": {
-                "x": 10583,
-                "y": -242
+                "x": 11110,
+                "y": -386
             }
         }
     },
-    "开始装备强化_第二次": {
+    "自动强化选择12级别": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    377,
+                    225,
+                    536,
+                    115
+                ],
+                "template": [
+                    "装备强化等级12.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "[JumpBack]自动强化选择12级别_第二次",
+            "自动强化选择8级别"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 10754,
+                "y": -609
+            }
+        }
+    },
+    "自动强化选择12级别_第二次": {
         "max_hit": 2,
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    678,
-                    482,
-                    189,
-                    52
+                    377,
+                    225,
+                    536,
+                    115
                 ],
-                "expected": [
-                    "自动强化"
+                "template": [
+                    "装备强化等级12.png"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 10930,
-                "y": -70
+                "x": 11096,
+                "y": -815
             }
         }
     },
-    "进入强化界面_第二次": {
+    "自动强化选择16级别": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    952,
-                    639,
-                    306,
-                    63
+                    377,
+                    225,
+                    536,
+                    115
                 ],
-                "expected": [
-                    "强化"
+                "template": [
+                    "装备强化等级16.png"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
-        "post_delay": 2000,
+        "post_delay": 1000,
+        "next": [
+            "[JumpBack]自动强化选择16级别_第二次",
+            "自动强化选择12级别"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 9843,
-                "y": -330
+                "x": 10704,
+                "y": -1086
+            }
+        }
+    },
+    "自动强化选择16级别_第二次": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    377,
+                    225,
+                    536,
+                    115
+                ],
+                "template": [
+                    "装备强化等级16.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 11064,
+                "y": -1270
             }
         }
     }
