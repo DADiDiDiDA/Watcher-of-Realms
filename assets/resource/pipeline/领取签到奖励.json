@@ -74,6 +74,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始第一次关闭签到窗口"
         ],
@@ -85,7 +86,7 @@
         }
     },
     "有可领取奖励-签到": {
-        "post_delay": 1500,
+        "post_delay": 2000,
         "timeout": 4000,
         "next": [
             "是签到奖励待领取吗",
@@ -120,6 +121,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "[JumpBack]检测是否有可领取奖励-签到_第二次",
             "有可领取奖励-签到"
@@ -149,6 +151,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "关闭菜单结束-领取签到奖励"
         ],
@@ -207,6 +210,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始关闭主菜单界面-签到奖励领取"
         ],
@@ -235,7 +239,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1500,
+        "post_delay": 2000,
         "next": [
             "第二次关闭签到窗口",
             "开始关闭主菜单界面-签到奖励领取"
@@ -269,6 +273,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 9087,

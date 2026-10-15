@@ -42,6 +42,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 8835,
@@ -338,6 +339,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 5167,
@@ -421,7 +423,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "[JumpBack]自动强化选择4级别_第二次",
             "开始装备强化"
@@ -452,6 +454,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 11027,
@@ -765,6 +768,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "判断是否需要装备升级"
         ],
@@ -911,7 +915,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "[JumpBack]自动强化选择8级别_第二次",
             "自动强化选择4级别"
@@ -942,6 +946,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "focus": "",
         "$__mpe_code": {
             "position": {
@@ -968,7 +973,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "[JumpBack]自动强化选择12级别_第二次",
             "自动强化选择8级别"
@@ -999,6 +1004,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 11096,
@@ -1024,7 +1030,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "[JumpBack]自动强化选择16级别_第二次",
             "自动强化选择12级别"
@@ -1055,6 +1061,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 11064,

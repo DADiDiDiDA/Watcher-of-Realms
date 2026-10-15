@@ -72,6 +72,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "等待召唤动画结束"
         ],
@@ -104,6 +105,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 9111,
@@ -265,6 +267,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 6287,
@@ -299,6 +302,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "单次召唤开始"
         ],
@@ -327,6 +331,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 8895,
@@ -352,7 +357,7 @@
         "action": {
             "type": "Click"
         },
-        "post_delay": 1500,
+        "post_delay": 2000,
         "next": [
             "[JumpBack]确定收获召唤角色_第二次",
             "返回主界面开始"
@@ -382,6 +387,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 9392,
@@ -591,6 +597,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始检查召唤一次任务是否完成"
         ],
@@ -620,6 +627,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "单次召唤开始"
         ],
@@ -682,6 +690,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 8201,

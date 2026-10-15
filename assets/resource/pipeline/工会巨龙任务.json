@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -631,
-                "y": -125,
-                "zoom": 0.57
+                "x": 386,
+                "y": 51,
+                "zoom": 0.76
             },
             "filename": "工会巨龙任务",
-            "version": "v2.0.4"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_工会巨龙任务": {
@@ -75,6 +75,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "[JumpBack]开始挑战巨龙_第二次",
             "检查自动战斗-巨龙遗迹"
@@ -104,6 +105,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 4127,
@@ -225,6 +227,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "[JumpBack]挑战难度：噩梦IV_第二次",
             "开始挑战巨龙"
@@ -255,6 +258,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 3136,
@@ -281,6 +285,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "[JumpBack]挑战难度：噩梦Ⅲ_第二次",
             "开始挑战巨龙"
@@ -312,6 +317,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 3116,
@@ -338,6 +344,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "[JumpBack]挑战难度：深渊I_第二次",
             "开始挑战巨龙"
@@ -369,6 +376,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 3135,
@@ -406,7 +414,7 @@
         }
     },
     "未发现可领取奖励-巨龙遗迹": {
-        "post_delay": 1500,
+        "post_delay": 2000,
         "next": [
             "开始判断剩余挑战次数",
             "[JumpBack]战斗结束领取奖励_第二次",
@@ -527,7 +535,8 @@
                     29
                 ],
                 "expected": [
-                    "要塞"
+                    "要塞",
+                    "挑战"
                 ]
             }
         },
@@ -565,7 +574,8 @@
                     29
                 ],
                 "expected": [
-                    "要塞"
+                    "要塞",
+                    "挑战"
                 ]
             }
         },
