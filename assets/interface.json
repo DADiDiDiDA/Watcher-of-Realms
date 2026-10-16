@@ -27,8 +27,8 @@
     ],
 
     "pretask": {
-        "exec": "C:\\Users\\Administrator\\AppData\\Local\\Python\\bin\\python.exe",
-        "args": ["D:\\Application\\Automate\\Git-Maawork\\Watcher-of-Realms\\agent\\launch_via_launcher.py"],
+        "exec": "C:\\Windows\\System32\\cmd.exe",
+        "args": ["/c", "python", "..\\..\\agent\\launch_via_launcher.py"],
         "controller": ["桌面端"]
     },
 
@@ -46,7 +46,7 @@
             "name": "🎮 登录游戏",
             "entry": "返回主界面开始",
             "default_check": true,
-            "description": "在游戏加载完成后，自动进入游戏（不可以在游戏内执行欧）",
+            "description": "自动进入游戏",
             "option": ["启动游戏方式"]
         },
         {
@@ -59,7 +59,7 @@
             "name": "✉️领取邮件奖励",
             "entry": "开始领取邮箱奖励",
             "default_check": true,
-            "description": "领取邮件奖励，没有会跳过"
+            "description": "领取邮件"
         },
         {
             "name": "🎁 领取签到奖励",
@@ -71,7 +71,7 @@
             "name": "⛏️ 矿场领取",
             "entry": "点击矿场",
             "default_check": true,
-            "description": "领取矿场资源"
+            "description": "领取矿场"
         },
         {
             "name": "🛒 矮人超市购买",
@@ -95,7 +95,7 @@
             "name": "⛵ 航海",
             "entry": "航海启动",
             "default_check": true,
-            "description": "启航航海任务；航海任务为上一次派遣目标"
+            "description": "启动航海任务；航海任务为上一次派遣目标"
         },
         {
             "name": "🚢 休伯利安",
@@ -133,7 +133,7 @@
             "name": "📋 领取任务奖励第一次",
             "entry": "进入任务界面开始",
             "default_check": true,
-            "description": "领取任务奖励；只要完成的都会领取"
+            "description": "领取任务奖励"
         },
         {
             "name": "⚡ 装备升级",
@@ -151,7 +151,7 @@
             "name": "📋 领取任务奖励第二次",
             "entry": "进入任务界面开始",
             "default_check": true,
-            "description": "领取任务奖励，只要是完成的都会领取"
+            "description": "领取任务奖励"
         },
         {
             "name": "🏛️ 公会奖励领取",
@@ -181,7 +181,7 @@
             "name": "🗿 泰坦废墟任务",
             "entry": "泰坦废墟任务开始",
             "default_check": true,
-            "description": "自动完成泰坦废墟挑战并领取奖励"
+            "description": "自动完成泰坦废墟"
         }
     ],
 

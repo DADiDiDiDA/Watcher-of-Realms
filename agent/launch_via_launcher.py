@@ -26,13 +26,14 @@ import pygetwindow as gw
 # ---------- 路径与配置 ----------
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-LAUNCHER_PATH = r"D:\Game\Watcher of Realms\moontonlauncher.exe"
+LAUNCHER_LNK = os.path.join(SCRIPT_DIR, "moontonlauncher.lnk")
 BUTTON_IMAGE = os.path.join(SCRIPT_DIR, "start_button.png")
 UPDATE_BUTTON_IMAGE = os.path.join(SCRIPT_DIR, "update_button.png")
 
 CONFIDENCE = 0.8
 WINDOW_TITLE_KEYWORD = "Watcher Of Realms"
 GAME_PROCESS_NAME = "Watcher of Realms.exe"
+LAUNCHER_PROCESS_NAME = "moontonlauncher.exe"
 
 # 失败时的输出目录（不存在就跳过打包）
 CACHE_DIR = r"D:\Application\Automate\Cache"
@@ -85,7 +86,7 @@ def dump_failure(reason=""):
             f.write(f"失败原因: {reason}\n")
             f.write(f"cwd: {os.getcwd()}\n")
             f.write(f"__file__: {os.path.abspath(__file__)}\n")
-            f.write(f"LAUNCHER_PATH: {LAUNCHER_PATH}\n")
+            f.write(f"LAUNCHER_LNK: {LAUNCHER_LNK}\n")
             try:
                 f.write(f"pyautogui.size(): {pyautogui.size()}\n")
             except Exception:
@@ -127,6 +128,27 @@ def close_game_process():
             return False
     except Exception as e:
         print(f"❌ 关闭进程异常: {e}")
+        return False
+
+# ---------- 关闭已在运行的启动器进程 ----------
+def close_launcher_process():
+    try:
+        result = subprocess.run(
+            ["taskkill", "/f", "/im", LAUNCHER_PROCESS_NAME],
+            capture_output=True,
+            text=True
+        )
+        if result.returncode == 0:
+            print(f"✅ 已关闭启动器进程: {LAUNCHER_PROCESS_NAME}")
+            return True
+        elif "没有找到" in result.stderr or "not found" in result.stderr.lower():
+            print(f"ℹ️ 启动器进程未运行: {LAUNCHER_PROCESS_NAME}")
+            return True
+        else:
+            print(f"⚠️ 关闭启动器进程失败: {result.stderr}")
+            return False
+    except Exception as e:
+        print(f"❌ 关闭启动器进程异常: {e}")
         return False
 
 # ---------- 等待启动器窗口 ----------
@@ -350,10 +372,16 @@ def main():
     print("🔍 检查并关闭游戏进程...")
     close_game_process()
 
+    # 1.5 关闭已在运行的启动器进程，等它完全退出
+    print("🔍 检查并关闭启动器进程...")
+    close_launcher_process()
+    print("⏳ 等待 3 秒...")
+    time.sleep(3)
+
     # 2. 启动沐瞳启动器
     print("🚀 启动沐瞳启动器...")
-    print(f"📂 路径: {LAUNCHER_PATH}")
-    subprocess.Popen([LAUNCHER_PATH])
+    print(f"📂 路径: {LAUNCHER_LNK}")
+    os.startfile(LAUNCHER_LNK)
 
     # 3. 等待启动器窗口
     print("⏳ 等待启动器加载...")
