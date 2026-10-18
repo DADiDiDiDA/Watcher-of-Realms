@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 386,
-                "y": 51,
-                "zoom": 0.76
+                "x": -1280,
+                "y": 512,
+                "zoom": 0.7
             },
             "filename": "工会巨龙任务",
             "version": "v2.1.0"
@@ -182,6 +182,33 @@
             }
         }
     },
+    "战斗结束领取奖励_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1023,
+                    626,
+                    196,
+                    60
+                ],
+                "expected": [
+                    "完成"
+                ]
+            }
+        },
+        "pre_wait_freezes": 1500,
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "$__mpe_code": {
+            "position": {
+                "x": 2590,
+                "y": 1184
+            }
+        }
+    },
     "执行巨龙奖励领取": {
         "recognition": {
             "type": "OCR",
@@ -204,8 +231,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 1725,
-                "y": -255
+                "x": 1685,
+                "y": -571
             }
         }
     },
@@ -434,10 +461,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    544,
-                    561,
-                    160,
-                    47
+                    522,
+                    526,
+                    203,
+                    89
                 ],
                 "expected": [
                     "自动战斗进行中"
@@ -458,6 +485,7 @@
         "post_delay": 3000,
         "next": [
             "[JumpBack]执行巨龙奖励领取",
+            "[JumpBack]是不是巨龙深渊榜单-巨龙深渊榜单",
             "[JumpBack]有巨龙昨日奖励开始挑战",
             "未发现可领取奖励-巨龙遗迹"
         ],
@@ -656,30 +684,297 @@
             }
         }
     },
-    "战斗结束领取奖励_第二次": {
+    "是不是巨龙深渊榜单-巨龙深渊榜单": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    1023,
-                    626,
-                    196,
-                    60
+                    877,
+                    165,
+                    108,
+                    58
                 ],
                 "expected": [
-                    "完成"
+                    "深渊",
+                    "巨龙",
+                    "榜"
                 ]
             }
         },
-        "pre_wait_freezes": 1500,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    928,
+                    136,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "进入全服任务界面-巨龙深渊榜单",
+            "[JumpBack]是不是巨龙深渊榜单-巨龙深渊榜单_第二次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1790,
+                "y": -288
+            }
+        }
+    },
+    "进入全服任务界面-巨龙深渊榜单": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1038,
+                    60,
+                    102,
+                    66
+                ],
+                "expected": [
+                    "全服任务"
+                ]
+            }
+        },
         "action": {
             "type": "Click"
         },
-        "post_delay": 4000,
+        "post_delay": 2000,
+        "next": [
+            "判断是否位于全服任务界面-巨龙深渊榜单",
+            "[JumpBack]进入全服任务界面-巨龙深渊榜单_第二次"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 2590,
-                "y": 1184
+                "x": 2113,
+                "y": -304
+            }
+        }
+    },
+    "判断是否位于全服任务界面-巨龙深渊榜单": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    382,
+                    120,
+                    155,
+                    547
+                ],
+                "expected": [
+                    "深渊巨龙榜",
+                    "积分",
+                    "巨龙遗迹"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]开始领取全服任务奖励-巨龙深渊榜单",
+            "[JumpBack]确认全服任务奖励-巨龙深渊榜单",
+            "返回上一级-巨龙深渊榜单"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2471,
+                "y": -329
+            }
+        }
+    },
+    "开始领取全服任务奖励-巨龙深渊榜单": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1034,
+                    169,
+                    150,
+                    466
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 2926,
+                "y": -868
+            }
+        }
+    },
+    "确认全服任务奖励-巨龙深渊榜单": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    578,
+                    652,
+                    126,
+                    63
+                ],
+                "expected": [
+                    "点击"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 2939,
+                "y": -616
+            }
+        }
+    },
+    "返回上一级-巨龙深渊榜单": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    4,
+                    0,
+                    150,
+                    76
+                ],
+                "template": [
+                    "左上角返回箭头图标.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "判断是否位于巨龙遗迹",
+            "[JumpBack]返回上一级-巨龙深渊榜单_第二次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2935,
+                "y": -403
+            }
+        }
+    },
+    "进入全服任务界面-巨龙深渊榜单_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1038,
+                    60,
+                    102,
+                    66
+                ],
+                "expected": [
+                    "全服任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 2365,
+                "y": -515
+            }
+        }
+    },
+    "是不是巨龙深渊榜单-巨龙深渊榜单_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    877,
+                    165,
+                    108,
+                    58
+                ],
+                "expected": [
+                    "深渊",
+                    "巨龙",
+                    "榜"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    928,
+                    136,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 2041,
+                "y": -571
+            }
+        }
+    },
+    "判断是否位于巨龙遗迹": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    125,
+                    7,
+                    184,
+                    58
+                ],
+                "expected": [
+                    "遗迹"
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3343,
+                "y": -432
+            }
+        }
+    },
+    "返回上一级-巨龙深渊榜单_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    4,
+                    0,
+                    150,
+                    76
+                ],
+                "template": [
+                    "左上角返回箭头图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 3237,
+                "y": -738
             }
         }
     }

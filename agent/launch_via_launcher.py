@@ -36,7 +36,7 @@ GAME_PROCESS_NAME = "Watcher of Realms.exe"
 LAUNCHER_PROCESS_NAME = "moontonlauncher.exe"
 
 # 失败时的输出目录（不存在就跳过打包）
-CACHE_DIR = r"D:\Application\Automate\Cache"
+CACHE_DIR = r"D:\Automate\Cache"
 
 # 日志文件（脚本自己的调试日志）
 DEBUG_LOG = os.path.join(SCRIPT_DIR, "pretask_debug.log")

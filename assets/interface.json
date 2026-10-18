@@ -1,363 +1,381 @@
 {
-    "interface_version": 2,
-    "name": "Tide-Watcher",
-    "description": "Tide-Watcher自动化",
-    "contact": "",
-    "license": "MIT",
-    "welcome": "注意看任务介绍！！！！！！",
-    "version": "1.4.7",
-
-    "controller": [
-        {
-            "name": "桌面端",
-            "type": "Win32",
-            "win32": {
-                "class_regex": ".*",
-                "window_regex": "潮汐守望者|Watcher Of Realms",
-                "screencap": "PrintWindow",
-                "mouse": "PostMessageWithCursorPos",
-                "keyboard": "PostMessageWithCursorPos"
-            }
-        },
-        {
-            "name": "安卓端",
-            "type": "Adb",
-            "display_short_side": 720
-        }
-    ],
-
-    "pretask": {
-        "exec": "C:\\Windows\\System32\\cmd.exe",
-        "args": ["/c", "python", "..\\..\\agent\\launch_via_launcher.py"],
-        "controller": ["桌面端"]
+  "interface_version": 2,
+  "name": "Tide-Watcher",
+  "description": "Tide-Watcher自动化",
+  "contact": "",
+  "license": "MIT",
+  "welcome": "注意看任务介绍！！！！！！",
+  "version": "1.4.7",
+  "controller": [
+    {
+      "name": "桌面端",
+      "type": "Win32",
+      "win32": {
+        "class_regex": ".*",
+        "window_regex": "潮汐守望者|Watcher Of Realms",
+        "screencap": "PrintWindow",
+        "mouse": "PostMessageWithCursorPos",
+        "keyboard": "PostMessageWithCursorPos"
+      }
     },
-
-    "resource": [
-        {
-            "name": "官服",
-            "path": [
-                "./resource"
-            ]
-        }
-    ],
-
-    "task": [
-        {
-            "name": "🎮 登录游戏",
-            "entry": "返回主界面开始",
-            "default_check": true,
-            "description": "自动进入游戏",
-            "option": ["启动游戏方式"]
-        },
-        {
-            "name": "🎁 领取商城免费礼包",
-            "entry": "领取商城免费礼包开始",
-            "default_check": true,
-            "description": "领取商城各类免费礼包"
-        },
-        {
-            "name": "✉️领取邮件奖励",
-            "entry": "开始领取邮箱奖励",
-            "default_check": true,
-            "description": "领取邮件"
-        },
-        {
-            "name": "🎁 领取签到奖励",
-            "entry": "开始领取签到奖励",
-            "default_check": true,
-            "description": "领取每日签到奖励"
-        },
-        {
-            "name": "⛏️ 矿场领取",
-            "entry": "点击矿场",
-            "default_check": true,
-            "description": "领取矿场"
-        },
-        {
-            "name": "🛒 矮人超市购买",
-            "entry": "矮人超市购买开始",
-            "default_check": true,
-            "description": "购买一次矮人超市金币商品并执行一次一键购买（需要预设好购买的物品；请保证货币充足！！！！）"
-        },
-        {
-            "name": "👥 领取友情点",
-            "entry": "点击好友图标",
-            "default_check": true,
-            "description": "领取并赠送友情点"
-        },
-        {
-            "name": "💪 友情点换体力",
-            "entry": "点击增加体力图标",
-            "default_check": true,
-            "description": "使用友情点兑换体力"
-        },
-        {
-            "name": "⛵ 航海",
-            "entry": "航海启动",
-            "default_check": true,
-            "description": "启动航海任务；航海任务为上一次派遣目标"
-        },
-        {
-            "name": "🚢 休伯利安",
-            "entry": "休伯利安启动",
-            "default_check": true,
-            "description": "领取每日休伯利安奖励"
-        },
-        {
-            "name": "⚔️ 刷体力",
-            "entry": "进入副本选择",
-            "default_check": true,
-            "description": "自动刷副本（可在下方选择要刷的副本类型）",
-            "option": ["副本选择"]
-        },
-        {
-            "name": "🌊 魔潮扫荡",
-            "entry": "魔潮扫荡开始节点",
-            "default_check": true,
-            "description": "自动扫荡魔潮副本"
-        },
-        {
-            "name": "📦 分解角色",
-            "entry": "分解角色开始节点",
-            "default_check": true,
-            "description": "自动遣散一星二星三星角色，以保证英雄数量不会超出仓库"
-        },
-        {
-            "name": "🐉 公会巨龙",
-            "entry": "工会巨龙任务开始",
-            "default_check": true,
-            "description": "挑战两次巨龙",
-            "option": ["巨龙第一次难度", "巨龙第二次难度"]
-        },
-        {
-            "name": "📋 领取任务奖励第一次",
-            "entry": "进入任务界面开始",
-            "default_check": true,
-            "description": "领取任务奖励"
-        },
-        {
-            "name": "⚡ 装备升级",
-            "entry": "装备升级开始",
-            "default_check": true,
-            "description": "自动强化装备至4级；如果每日任务没有强化装备任务，就跳过；请保证你有可升级的装备！！！！"
-        },
-        {
-            "name": "🔮 英灵召唤一次",
-            "entry": "开始英灵召唤一次任务",
-            "default_check": true,
-            "description": "自动进行一次英灵召唤，如果每日任务没有召唤一次任务，就跳过"
-        },
-        {
-            "name": "📋 领取任务奖励第二次",
-            "entry": "进入任务界面开始",
-            "default_check": true,
-            "description": "领取任务奖励"
-        },
-        {
-            "name": "🏛️ 公会奖励领取",
-            "entry": "开始公会奖励领取",
-            "default_check": true,
-            "description": "领取公会的待领取奖励；不领取工会战奖励！！"
-        },
-        {
-            "name": "🎟️ 通行证奖励领取",
-            "entry": "开始进入通行证",
-            "default_check": true,
-            "description": "通行证奖励领取"
-        },
-        {
-            "name": "⏰ 在线奖励领取",
-            "entry": "开始在线奖励领取",
-            "default_check": true,
-            "description": "领取在线时长奖励"
-        },
-        {
-            "name": "🔄 每周交易所交易",
-            "entry": "每周交易所交易开始",
-            "default_check": true,
-            "description": "每周交易所交易"
-        },
-        {
-            "name": "🗿 泰坦废墟任务",
-            "entry": "泰坦废墟任务开始",
-            "default_check": true,
-            "description": "自动完成泰坦废墟"
-        }
-    ],
-
-    "option": {
-        "副本选择": {
-            "type": "select",
-            "label": "副本选择",
-            "description": "选择要自动刷取的副本类型",
-            "default_case": "装备本三",
-            "cases": [
-                {
-                    "name": "装备本一",
-                    "label": "装备本一",
-                    "description": "刷取装备副本一",
-                    "pipeline_override": {
-                        "开始选择刷取关卡": {
-                            "next": [
-                                "进入装备本-装备一",
-                                "[JumpBack]进入副本选择开始_第三次_兜底措施"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "装备本二",
-                    "label": "装备本二",
-                    "description": "刷取装备副本二",
-                    "pipeline_override": {
-                        "开始选择刷取关卡": {
-                            "next": [
-                                "进入装备本-装备二",
-                                "[JumpBack]进入副本选择开始_第三次_兜底措施"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "装备本三",
-                    "label": "装备本三",
-                    "description": "刷取装备副本三",
-                    "pipeline_override": {
-                        "开始选择刷取关卡": {
-                            "next": [
-                                "进入装备本-装备三",
-                                "[JumpBack]进入副本选择开始_第三次_兜底措施"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "神器本",
-                    "label": "神器本",
-                    "description": "刷取神器副本",
-                    "pipeline_override": {
-                        "开始选择刷取关卡": {
-                            "next": [
-                                "进入神器本",
-                                "[JumpBack]进入副本选择开始_第三次_兜底措施"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "启动游戏方式": {
-            "type": "select",
-            "label": "启动游戏方式",
-            "description": "选择登录游戏时的启动方式",
-            "default_case": "直接执行任务",
-            "cases": [
-                {
-                    "name": "直接执行任务",
-                    "label": "直接执行任务",
-                    "description": "默认方式，直接进入游戏",
-                    "pipeline_override": {
-                        "返回主界面开始": {
-                            "next": ["直接执行任务"]
-                        }
-                    }
-                },
-                {
-                    "name": "启动游戏",
-                    "label": "启动游戏",
-                    "description": "启动游戏应用（不是模拟器不要用）",
-                    "pipeline_override": {
-                        "返回主界面开始": {
-                            "next": ["启动游戏"]
-                        }
-                    }
-                }
-            ]
-        },
-        "巨龙第一次难度": {
-            "type": "select",
-            "label": "巨龙第一次难度",
-            "description": "选择公会巨龙第一次挑战的难度",
-            "default_case": "first_nightmare_3",
-            "cases": [
-                {
-                    "name": "first_nightmare_3",
-                    "label": "噩梦Ⅲ",
-                    "description": "第一次挑战噩梦Ⅲ",
-                    "pipeline_override": {
-                        "开始选择打什么难度第一次-巨龙遗迹": {
-                            "next": ["挑战难度：噩梦Ⅲ"]
-                        }
-                    }
-                },
-                {
-                    "name": "first_nightmare_4",
-                    "label": "噩梦IV",
-                    "description": "第一次挑战噩梦IV",
-                    "pipeline_override": {
-                        "开始选择打什么难度第一次-巨龙遗迹": {
-                            "next": ["挑战难度：噩梦IV"]
-                        }
-                    }
-                },
-                {
-                    "name": "first_abyss_1",
-                    "label": "深渊I",
-                    "description": "第一次挑战深渊I",
-                    "pipeline_override": {
-                        "开始选择打什么难度第一次-巨龙遗迹": {
-                            "next": ["挑战难度：深渊I"]
-                        }
-                    }
-                }
-            ]
-        },
-        "巨龙第二次难度": {
-            "type": "select",
-            "label": "巨龙第二次难度",
-            "description": "选择公会巨龙第二次挑战的难度",
-            "default_case": "second_nightmare_4",
-            "cases": [
-                {
-                    "name": "second_nightmare_3",
-                    "label": "噩梦Ⅲ",
-                    "description": "第二次挑战噩梦Ⅲ",
-                    "pipeline_override": {
-                        "开始选择打什么难度第二次-巨龙遗迹": {
-                            "next": [
-                                "挑战难度：噩梦Ⅲ",
-                                "[JumpBack]战斗结束领取奖励_第二次"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "second_nightmare_4",
-                    "label": "噩梦IV",
-                    "description": "第二次挑战噩梦IV",
-                    "pipeline_override": {
-                        "开始选择打什么难度第二次-巨龙遗迹": {
-                            "next": [
-                                "挑战难度：噩梦IV",
-                                "[JumpBack]战斗结束领取奖励_第二次"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "second_abyss_1",
-                    "label": "深渊I",
-                    "description": "第二次挑战深渊I",
-                    "pipeline_override": {
-                        "开始选择打什么难度第二次-巨龙遗迹": {
-                            "next": [
-                                "挑战难度：深渊I",
-                                "[JumpBack]战斗结束领取奖励_第二次"
-                            ]
-                        }
-                    }
-                }
-            ]
-        }
+    {
+      "name": "安卓端",
+      "type": "Adb",
+      "display_short_side": 720
     }
+  ],
+  "pretask": {
+    "exec": "C:\\Windows\\System32\\cmd.exe",
+    "args": [
+      "/c",
+      "D:\\Automate\\ZZZ-onedragon\\.venv\\Scripts\\python.exe",
+      "..\\..\\agent\\launch_via_launcher.py"
+    ],
+    "controller": [
+      "桌面端"
+    ]
+  },
+  "resource": [
+    {
+      "name": "官服",
+      "path": [
+        "./resource"
+      ]
+    }
+  ],
+  "task": [
+    {
+      "name": "🎮 登录游戏",
+      "entry": "返回主界面开始",
+      "default_check": true,
+      "description": "自动进入游戏",
+      "option": [
+        "启动游戏方式"
+      ]
+    },
+    {
+      "name": "🎁 领取商城免费礼包",
+      "entry": "领取商城免费礼包开始",
+      "default_check": true,
+      "description": "领取商城各类免费礼包"
+    },
+    {
+      "name": "✉️领取邮件奖励",
+      "entry": "开始领取邮箱奖励",
+      "default_check": true,
+      "description": "领取邮件"
+    },
+    {
+      "name": "🎁 领取签到奖励",
+      "entry": "开始领取签到奖励",
+      "default_check": true,
+      "description": "领取每日签到奖励"
+    },
+    {
+      "name": "⛏️ 矿场领取",
+      "entry": "点击矿场",
+      "default_check": true,
+      "description": "领取矿场"
+    },
+    {
+      "name": "🛒 矮人超市购买",
+      "entry": "矮人超市购买开始",
+      "default_check": true,
+      "description": "购买一次矮人超市金币商品并执行一次一键购买（需要预设好购买的物品；请保证货币充足！！！！）"
+    },
+    {
+      "name": "👥 领取友情点",
+      "entry": "点击好友图标",
+      "default_check": true,
+      "description": "领取并赠送友情点"
+    },
+    {
+      "name": "💪 友情点换体力",
+      "entry": "点击增加体力图标",
+      "default_check": true,
+      "description": "使用友情点兑换体力"
+    },
+    {
+      "name": "⛵ 航海",
+      "entry": "航海启动",
+      "default_check": true,
+      "description": "启动航海任务；航海任务为上一次派遣目标"
+    },
+    {
+      "name": "🚢 休伯利安",
+      "entry": "休伯利安启动",
+      "default_check": true,
+      "description": "领取每日休伯利安奖励"
+    },
+    {
+      "name": "⚔️ 刷体力",
+      "entry": "进入副本选择",
+      "default_check": true,
+      "description": "自动刷副本（可在下方选择要刷的副本类型）",
+      "option": [
+        "副本选择"
+      ]
+    },
+    {
+      "name": "🌊 魔潮扫荡",
+      "entry": "魔潮扫荡开始节点",
+      "default_check": true,
+      "description": "自动扫荡魔潮副本"
+    },
+    {
+      "name": "📦 分解角色",
+      "entry": "分解角色开始节点",
+      "default_check": true,
+      "description": "自动遣散一星二星三星角色，以保证英雄数量不会超出仓库"
+    },
+    {
+      "name": "🐉 公会巨龙",
+      "entry": "工会巨龙任务开始",
+      "default_check": true,
+      "description": "挑战两次巨龙",
+      "option": [
+        "巨龙第一次难度",
+        "巨龙第二次难度"
+      ]
+    },
+    {
+      "name": "📋 领取任务奖励第一次",
+      "entry": "进入任务界面开始",
+      "default_check": true,
+      "description": "领取任务奖励"
+    },
+    {
+      "name": "⚡ 装备升级",
+      "entry": "装备升级开始",
+      "default_check": true,
+      "description": "自动强化装备至4级；如果每日任务没有强化装备任务，就跳过；请保证你有可升级的装备！！！！"
+    },
+    {
+      "name": "🔮 英灵召唤一次",
+      "entry": "开始英灵召唤一次任务",
+      "default_check": true,
+      "description": "自动进行一次英灵召唤，如果每日任务没有召唤一次任务，就跳过"
+    },
+    {
+      "name": "📋 领取任务奖励第二次",
+      "entry": "进入任务界面开始",
+      "default_check": true,
+      "description": "领取任务奖励"
+    },
+    {
+      "name": "🏛️ 公会奖励领取",
+      "entry": "开始公会奖励领取",
+      "default_check": true,
+      "description": "领取公会的待领取奖励；不领取工会战奖励！！"
+    },
+    {
+      "name": "🎟️ 通行证奖励领取",
+      "entry": "开始进入通行证",
+      "default_check": true,
+      "description": "通行证奖励领取"
+    },
+    {
+      "name": "⏰ 在线奖励领取",
+      "entry": "开始在线奖励领取",
+      "default_check": true,
+      "description": "领取在线时长奖励"
+    },
+    {
+      "name": "🔄 每周交易所交易",
+      "entry": "每周交易所交易开始",
+      "default_check": true,
+      "description": "每周交易所交易"
+    },
+    {
+      "name": "🗿 泰坦废墟任务",
+      "entry": "泰坦废墟任务开始",
+      "default_check": true,
+      "description": "自动完成泰坦废墟"
+    }
+  ],
+  "option": {
+    "副本选择": {
+      "type": "select",
+      "label": "副本选择",
+      "description": "选择要自动刷取的副本类型",
+      "default_case": "装备本三",
+      "cases": [
+        {
+          "name": "装备本一",
+          "label": "装备本一",
+          "description": "刷取装备副本一",
+          "pipeline_override": {
+            "开始选择刷取关卡": {
+              "next": [
+                "进入装备本-装备一",
+                "[JumpBack]进入副本选择开始_第三次_兜底措施"
+              ]
+            }
+          }
+        },
+        {
+          "name": "装备本二",
+          "label": "装备本二",
+          "description": "刷取装备副本二",
+          "pipeline_override": {
+            "开始选择刷取关卡": {
+              "next": [
+                "进入装备本-装备二",
+                "[JumpBack]进入副本选择开始_第三次_兜底措施"
+              ]
+            }
+          }
+        },
+        {
+          "name": "装备本三",
+          "label": "装备本三",
+          "description": "刷取装备副本三",
+          "pipeline_override": {
+            "开始选择刷取关卡": {
+              "next": [
+                "进入装备本-装备三",
+                "[JumpBack]进入副本选择开始_第三次_兜底措施"
+              ]
+            }
+          }
+        },
+        {
+          "name": "神器本",
+          "label": "神器本",
+          "description": "刷取神器副本",
+          "pipeline_override": {
+            "开始选择刷取关卡": {
+              "next": [
+                "进入神器本",
+                "[JumpBack]进入副本选择开始_第三次_兜底措施"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "启动游戏方式": {
+      "type": "select",
+      "label": "启动游戏方式",
+      "description": "选择登录游戏时的启动方式",
+      "default_case": "直接执行任务",
+      "cases": [
+        {
+          "name": "直接执行任务",
+          "label": "直接执行任务",
+          "description": "默认方式，直接进入游戏",
+          "pipeline_override": {
+            "返回主界面开始": {
+              "next": [
+                "直接执行任务"
+              ]
+            }
+          }
+        },
+        {
+          "name": "启动游戏",
+          "label": "启动游戏",
+          "description": "启动游戏应用（不是模拟器不要用）",
+          "pipeline_override": {
+            "返回主界面开始": {
+              "next": [
+                "启动游戏"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "巨龙第一次难度": {
+      "type": "select",
+      "label": "巨龙第一次难度",
+      "description": "选择公会巨龙第一次挑战的难度",
+      "default_case": "first_nightmare_3",
+      "cases": [
+        {
+          "name": "first_nightmare_3",
+          "label": "噩梦Ⅲ",
+          "description": "第一次挑战噩梦Ⅲ",
+          "pipeline_override": {
+            "开始选择打什么难度第一次-巨龙遗迹": {
+              "next": [
+                "挑战难度：噩梦Ⅲ"
+              ]
+            }
+          }
+        },
+        {
+          "name": "first_nightmare_4",
+          "label": "噩梦IV",
+          "description": "第一次挑战噩梦IV",
+          "pipeline_override": {
+            "开始选择打什么难度第一次-巨龙遗迹": {
+              "next": [
+                "挑战难度：噩梦IV"
+              ]
+            }
+          }
+        },
+        {
+          "name": "first_abyss_1",
+          "label": "深渊I",
+          "description": "第一次挑战深渊I",
+          "pipeline_override": {
+            "开始选择打什么难度第一次-巨龙遗迹": {
+              "next": [
+                "挑战难度：深渊I"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "巨龙第二次难度": {
+      "type": "select",
+      "label": "巨龙第二次难度",
+      "description": "选择公会巨龙第二次挑战的难度",
+      "default_case": "second_nightmare_4",
+      "cases": [
+        {
+          "name": "second_nightmare_3",
+          "label": "噩梦Ⅲ",
+          "description": "第二次挑战噩梦Ⅲ",
+          "pipeline_override": {
+            "开始选择打什么难度第二次-巨龙遗迹": {
+              "next": [
+                "挑战难度：噩梦Ⅲ",
+                "[JumpBack]战斗结束领取奖励_第二次"
+              ]
+            }
+          }
+        },
+        {
+          "name": "second_nightmare_4",
+          "label": "噩梦IV",
+          "description": "第二次挑战噩梦IV",
+          "pipeline_override": {
+            "开始选择打什么难度第二次-巨龙遗迹": {
+              "next": [
+                "挑战难度：噩梦IV",
+                "[JumpBack]战斗结束领取奖励_第二次"
+              ]
+            }
+          }
+        },
+        {
+          "name": "second_abyss_1",
+          "label": "深渊I",
+          "description": "第二次挑战深渊I",
+          "pipeline_override": {
+            "开始选择打什么难度第二次-巨龙遗迹": {
+              "next": [
+                "挑战难度：深渊I",
+                "[JumpBack]战斗结束领取奖励_第二次"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
 }
