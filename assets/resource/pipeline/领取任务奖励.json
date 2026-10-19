@@ -21,7 +21,6 @@
         }
     },
     "有没有待领取奖励开始": {
-        "timeout": 3000,
         "next": [
             "[JumpBack]检查有没有待领取",
             "要不要确认奖励升级",
@@ -57,7 +56,6 @@
             "type": "Click"
         },
         "post_delay": 4000,
-        "timeout": 2000,
         "next": [
             "领取奖励"
         ],
@@ -183,7 +181,6 @@
             "type": "Click"
         },
         "post_delay": 2000,
-        "timeout": 2000,
         "next": [
             "确认任务奖励",
             "[JumpBack]领取奖励_第二次"
@@ -214,7 +211,6 @@
             "type": "Click"
         },
         "post_delay": 2000,
-        "timeout": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 5369,

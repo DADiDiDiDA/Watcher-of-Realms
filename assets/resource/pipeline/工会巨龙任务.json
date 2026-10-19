@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1280,
-                "y": 512,
-                "zoom": 0.7
+                "x": -1448,
+                "y": 555,
+                "zoom": 0.69
             },
             "filename": "工会巨龙任务",
             "version": "v2.1.0"
@@ -849,7 +849,7 @@
                     "左上角返回箭头图标.png"
                 ],
                 "threshold": [
-                    0.6
+                    0.55
                 ]
             }
         },
@@ -964,6 +964,9 @@
                 ],
                 "template": [
                     "左上角返回箭头图标.png"
+                ],
+                "threshold": [
+                    0.55
                 ]
             }
         },
