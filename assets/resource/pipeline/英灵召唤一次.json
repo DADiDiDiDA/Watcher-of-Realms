@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -3285,
-                "y": 128,
-                "zoom": 0.62
+                "x": -5388,
+                "y": 315,
+                "zoom": 0.69
             },
             "filename": "英灵召唤一次",
-            "version": "v2.0.6"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_英灵召唤一次": {
@@ -333,8 +333,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 8895,
-                "y": -767
+                "x": 8923,
+                "y": -802
             }
         }
     },
@@ -396,11 +396,13 @@
     },
     "等待召唤动画结束": {
         "post_delay": 2000,
+        "timeout": 25000,
         "next": [
             "[JumpBack]确定召唤角色",
             "确定收获召唤角色",
             "[JumpBack]开始单次召唤_第二次",
-            "需要选择召唤目标"
+            "需要选择召唤目标",
+            "召唤出5星角色-需要评价"
         ],
         "$__mpe_code": {
             "position": {
@@ -657,8 +659,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8714,
-                "y": -116
+                "x": 8489,
+                "y": 17
             }
         }
     },
@@ -692,8 +694,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 8201,
-                "y": -118
+                "x": 8136,
+                "y": -59
             }
         }
     },
@@ -706,6 +708,78 @@
             "position": {
                 "x": 6281,
                 "y": 474
+            }
+        }
+    },
+    "召唤出5星角色-需要评价": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    546,
+                    510,
+                    487,
+                    79
+                ],
+                "expected": [
+                    "点击上方"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    604,
+                    10,
+                    89,
+                    19
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "确定收获召唤角色",
+            "[JumpBack]召唤出5星角色-需要评价_第二次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8711,
+                "y": -188
+            }
+        }
+    },
+    "召唤出5星角色-需要评价_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    546,
+                    510,
+                    487,
+                    79
+                ],
+                "expected": [
+                    "点击上方"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    604,
+                    10,
+                    89,
+                    19
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 8964,
+                "y": 26
             }
         }
     }
