@@ -105,7 +105,7 @@
         "post_delay": 2000,
         "next": [
             "进入更换界面",
-            "[JumpBack]点击增加体力图标开始_第二次"
+            "[JumpBack]点击增加体力图标开始-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -114,7 +114,7 @@
             }
         }
     },
-    "点击增加体力图标开始_第二次": {
+    "点击增加体力图标开始-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -186,7 +186,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "[JumpBack]进入更换界面_第二次",
+            "[JumpBack]进入更换界面-第二次",
             "换体力开始"
         ],
         "$__mpe_code": {
@@ -196,7 +196,7 @@
             }
         }
     },
-    "进入更换界面_第二次": {
+    "进入更换界面-第二次": {
         "recognition": {
             "type": "OCR",
             "param": {

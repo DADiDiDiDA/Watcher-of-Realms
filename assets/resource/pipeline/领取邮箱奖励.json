@@ -42,7 +42,7 @@
     "开始点击全部领取邮箱奖励": {
         "next": [
             "点击全部领取邮箱奖励",
-            "[JumpBack]是邮箱奖励吗_第二次"
+            "[JumpBack]是邮箱奖励吗-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -205,7 +205,7 @@
             }
         }
     },
-    "是邮箱奖励吗_第二次": {
+    "是邮箱奖励吗-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {

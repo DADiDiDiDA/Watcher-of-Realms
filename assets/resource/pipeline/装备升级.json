@@ -132,7 +132,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "[JumpBack]开始装备强化_第二次",
+            "[JumpBack]开始装备强化-第二次",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -142,7 +142,7 @@
             }
         }
     },
-    "开始装备强化_第二次": {
+    "开始装备强化-第二次": {
         "max_hit": 2,
         "recognition": {
             "type": "OCR",
@@ -190,7 +190,7 @@
         "post_delay": 4000,
         "next": [
             "装备升级",
-            "[JumpBack]强化装备任务未完成返回主界面_第二次"
+            "[JumpBack]强化装备任务未完成返回主界面-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -199,7 +199,7 @@
             }
         }
     },
-    "强化装备任务未完成返回主界面_第二次": {
+    "强化装备任务未完成返回主界面-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -366,7 +366,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "进行排序选择"
+            "进行排序选择",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -395,7 +396,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "选择菜单选择为等级"
+            "选择菜单选择为等级",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -424,7 +426,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "[JumpBack]自动强化选择4级别_第二次",
+            "[JumpBack]自动强化选择4级别-第二次",
             "开始装备强化"
         ],
         "$__mpe_code": {
@@ -434,7 +436,7 @@
             }
         }
     },
-    "自动强化选择4级别_第二次": {
+    "自动强化选择4级别-第二次": {
         "max_hit": 2,
         "recognition": {
             "type": "TemplateMatch",
@@ -482,7 +484,7 @@
         "post_delay": 2000,
         "next": [
             "选择装备",
-            "[JumpBack]装备升级_第二次"
+            "[JumpBack]装备升级-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -491,7 +493,7 @@
             }
         }
     },
-    "装备升级_第二次": {
+    "装备升级-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -550,7 +552,7 @@
         "post_delay": 2000,
         "next": [
             "选择每日任务界面装备升级任务",
-            "[JumpBack]进入任务界面检查升级装备任务_第二次"
+            "[JumpBack]进入任务界面检查升级装备任务-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -559,7 +561,7 @@
             }
         }
     },
-    "进入任务界面检查升级装备任务_第二次": {
+    "进入任务界面检查升级装备任务-第二次": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -606,7 +608,7 @@
         "post_delay": 2000,
         "next": [
             "进入自动强化界面",
-            "[JumpBack]进入强化界面_第二次"
+            "[JumpBack]进入强化界面-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -615,7 +617,7 @@
             }
         }
     },
-    "进入强化界面_第二次": {
+    "进入强化界面-第二次": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -661,7 +663,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "[JumpBack]进入自动强化界面_错误处理",
+            "[JumpBack]进入自动强化界面-错误处理",
             "自动强化选择16级别"
         ],
         "$__mpe_code": {
@@ -671,7 +673,7 @@
             }
         }
     },
-    "进入自动强化界面_错误处理": {
+    "进入自动强化界面-错误处理": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -717,7 +719,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "关闭二级界面-装备升级"
+            "关闭二级界面-装备升级",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -740,7 +743,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "选择第一件装备强化装备"
+            "选择第一件装备强化装备",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -801,7 +805,7 @@
         "post_delay": 2000,
         "next": [
             "进入强化界面",
-            "[JumpBack]选择第一件装备强化装备_第二次"
+            "[JumpBack]选择第一件装备强化装备-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -810,7 +814,7 @@
             }
         }
     },
-    "选择第一件装备强化装备_第二次": {
+    "选择第一件装备强化装备-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -858,7 +862,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "关闭二级界面-装备升级"
+            "关闭二级界面-装备升级",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -916,7 +921,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "[JumpBack]自动强化选择8级别_第二次",
+            "[JumpBack]自动强化选择8级别-第二次",
             "自动强化选择4级别"
         ],
         "$__mpe_code": {
@@ -926,7 +931,7 @@
             }
         }
     },
-    "自动强化选择8级别_第二次": {
+    "自动强化选择8级别-第二次": {
         "max_hit": 2,
         "recognition": {
             "type": "TemplateMatch",
@@ -974,7 +979,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "[JumpBack]自动强化选择12级别_第二次",
+            "[JumpBack]自动强化选择12级别-第二次",
             "自动强化选择8级别"
         ],
         "$__mpe_code": {
@@ -984,7 +989,7 @@
             }
         }
     },
-    "自动强化选择12级别_第二次": {
+    "自动强化选择12级别-第二次": {
         "max_hit": 2,
         "recognition": {
             "type": "TemplateMatch",
@@ -1031,7 +1036,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "[JumpBack]自动强化选择16级别_第二次",
+            "[JumpBack]自动强化选择16级别-第二次",
             "自动强化选择12级别"
         ],
         "$__mpe_code": {
@@ -1041,7 +1046,7 @@
             }
         }
     },
-    "自动强化选择16级别_第二次": {
+    "自动强化选择16级别-第二次": {
         "max_hit": 2,
         "recognition": {
             "type": "TemplateMatch",

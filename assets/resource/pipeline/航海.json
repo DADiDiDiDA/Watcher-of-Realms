@@ -52,7 +52,7 @@
             }
         }
     },
-    "是不是航海资源满了_结束": {
+    "是不是航海资源满了-结束": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -73,7 +73,7 @@
         "post_delay": 2000,
         "next": [
             "航海资源满了领取",
-            "[JumpBack]是不是航海资源满了_结束_第二次"
+            "[JumpBack]是不是航海资源满了-结束-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -103,7 +103,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "[JumpBack]检测航海状态_第二次",
+            "[JumpBack]检测航海状态-第二次",
             "航海节点次数检测"
         ],
         "$__mpe_code": {
@@ -113,7 +113,7 @@
             }
         }
     },
-    "检测航海状态_第二次": {
+    "检测航海状态-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -154,7 +154,7 @@
     "航海检测状态": {
         "next": [
             "检测航海状态",
-            "[JumpBack]是不是航海资源满了_结束",
+            "[JumpBack]是不是航海资源满了-结束",
             "[JumpBack]航海资源满了领取",
             "[JumpBack]航海滑动屏幕启动"
         ],
@@ -285,7 +285,7 @@
             }
         }
     },
-    "是不是航海资源满了_结束_第二次": {
+    "是不是航海资源满了-结束-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {

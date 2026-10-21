@@ -136,7 +136,7 @@
         "post_delay": 2000,
         "next": [
             "开始选择一星二星三星角色",
-            "[JumpBack]进入分解界面_第二次"
+            "[JumpBack]进入分解界面-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -166,7 +166,7 @@
         "post_delay": 2000,
         "next": [
             "进入分解界面",
-            "[JumpBack]进入角色界面_第二次"
+            "[JumpBack]进入角色界面-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -242,7 +242,7 @@
             }
         }
     },
-    "进入角色界面_第二次": {
+    "进入角色界面-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -268,7 +268,7 @@
             }
         }
     },
-    "进入分解界面_第二次": {
+    "进入分解界面-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
