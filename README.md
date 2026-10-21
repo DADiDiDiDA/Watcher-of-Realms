@@ -13,16 +13,7 @@
 
 在你要用来运行 pretask 的 Python 环境里执行：
 
-pip install pyautogui pygetwindow psutil opencv-python
-
-需要修改的东西只有三处（每次更新都要重改；如果只用模拟器不用管）：
-
-pretask.exec → 改成目标电脑的 Python 路径
-
-pretask.args → 改成目标电脑的脚本路径
-
-agent\\launch\_via\_launcher.py 里的 LAUNCHER\_PATH → 改成目标电脑的启动器路径
-
+pip install psutil pyautogui pygetwindow opencv-python pillow
 
 
 没发现bug，暂时不打算改了

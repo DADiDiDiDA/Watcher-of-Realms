@@ -454,4 +454,4 @@ config
 debug
 
 # 本机游戏启动器快捷方式（指向本机游戏安装位置，不入库）
-agent/moontonlauncher.lnk
+assets/resource/agent/moontonlauncher.lnk

@@ -28,8 +28,7 @@
     "exec": "C:\\Windows\\System32\\cmd.exe",
     "args": [
       "/c",
-      "D:\\Automate\\ZZZ-onedragon\\.venv\\Scripts\\python.exe",
-      "..\\..\\agent\\launch_via_launcher.py"
+      "python ..\\agent\\launch_via_launcher.py || py ..\\agent\\launch_via_launcher.py"
     ],
     "controller": [
       "桌面端"

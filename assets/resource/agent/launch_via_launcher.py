@@ -114,7 +114,9 @@ def close_game_process():
         result = subprocess.run(
             ["taskkill", "/f", "/im", GAME_PROCESS_NAME],
             capture_output=True,
-            text=True
+            text=True,
+            encoding="oem",
+            errors="replace"
         )
         if result.returncode == 0:
             print(f"✅ 已关闭游戏进程: {GAME_PROCESS_NAME}")
@@ -136,7 +138,9 @@ def close_launcher_process():
         result = subprocess.run(
             ["taskkill", "/f", "/im", LAUNCHER_PROCESS_NAME],
             capture_output=True,
-            text=True
+            text=True,
+            encoding="oem",
+            errors="replace"
         )
         if result.returncode == 0:
             print(f"✅ 已关闭启动器进程: {LAUNCHER_PROCESS_NAME}")
