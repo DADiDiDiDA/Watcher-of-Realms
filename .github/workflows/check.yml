@@ -1,5 +1,6 @@
 name: check
 
+# package-lock.json 已与 package.json 同步，下方 npm ci 现可通过
 on:
   push:
     branches:
