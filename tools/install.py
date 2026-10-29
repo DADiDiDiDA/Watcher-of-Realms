@@ -134,11 +134,21 @@ def install_chores():
 
 
 def install_agent():
-    shutil.copytree(
+    # 兼容两种布局：根目录 agent/ 或 assets/resource/agent/
+    agent_src_candidates = [
         working_dir / "agent",
-        install_path / "agent",
-        dirs_exist_ok=True,
-    )
+        working_dir / "assets" / "resource" / "agent",
+    ]
+    for agent_src in agent_src_candidates:
+        if agent_src.exists():
+            shutil.copytree(
+                agent_src,
+                install_path / "agent",
+                dirs_exist_ok=True,
+            )
+            print(f"Installed agent from {agent_src}.")
+            return
+    print("No agent directory found, skipping.")
 
 
 if __name__ == "__main__":
