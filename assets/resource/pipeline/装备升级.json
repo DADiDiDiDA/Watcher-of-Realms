@@ -3,17 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1791425236290,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "D:\\Application\\Automate\\Git-Maawork\\Watcher-of-Realms\\assets\\resource\\pipeline\\装备升级.json",
             "savedViewport": {
-                "x": -4807,
-                "y": -16,
-                "zoom": 0.5
+                "x": -573,
+                "y": 185,
+                "zoom": 0.29
             },
             "filename": "装备升级",
-            "version": "v2.0.7"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_装备升级": {
@@ -366,8 +362,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "进行排序选择",
-            "[JumpBack]返回主界面开始"
+            "进行排序选择"
         ],
         "$__mpe_code": {
             "position": {
@@ -396,8 +391,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "选择菜单选择为等级",
-            "[JumpBack]返回主界面开始"
+            "选择菜单选择为等级"
         ],
         "$__mpe_code": {
             "position": {
@@ -664,7 +658,8 @@
         "post_delay": 2000,
         "next": [
             "[JumpBack]进入自动强化界面-错误处理",
-            "自动强化选择16级别"
+            "自动强化选择16级别",
+            "自动强化选择12级别"
         ],
         "$__mpe_code": {
             "position": {
@@ -719,8 +714,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "关闭二级界面-装备升级",
-            "[JumpBack]返回主界面开始"
+            "关闭二级界面-装备升级"
         ],
         "$__mpe_code": {
             "position": {
@@ -743,8 +737,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "选择第一件装备强化装备",
-            "[JumpBack]返回主界面开始"
+            "选择第一件装备强化装备"
         ],
         "$__mpe_code": {
             "position": {
@@ -862,13 +855,12 @@
         },
         "post_delay": 2000,
         "next": [
-            "关闭二级界面-装备升级",
-            "[JumpBack]返回主界面开始"
+            "关闭二级界面-装备升级"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7823,
-                "y": -77
+                "x": 8123,
+                "y": 52
             }
         }
     },

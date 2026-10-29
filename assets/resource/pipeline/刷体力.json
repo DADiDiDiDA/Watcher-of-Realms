@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1557,
-                "y": 1030,
-                "zoom": 0.57
+                "x": 1897,
+                "y": 518,
+                "zoom": 0.53
             },
             "filename": "刷体力",
-            "version": "v1.10.0"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_刷体力": {
@@ -338,7 +338,8 @@
         },
         "timeout": 60000,
         "next": [
-            "扫荡结束确认结果"
+            "扫荡结束确认结果",
+            "[JumpBack]是不是有等级提升提示"
         ],
         "$__mpe_code": {
             "position": {
@@ -368,8 +369,7 @@
         },
         "post_delay": 2000,
         "next": [
-            "开始自动战斗",
-            "[JumpBack]返回主界面开始"
+            "开始自动战斗"
         ],
         "$__mpe_code": {
             "position": {
@@ -1260,6 +1260,31 @@
             "position": {
                 "x": 1466,
                 "y": -264
+            }
+        }
+    },
+    "是不是有等级提升提示": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    555,
+                    646,
+                    170,
+                    70
+                ],
+                "expected": [
+                    "点击"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4224,
+                "y": -739
             }
         }
     }

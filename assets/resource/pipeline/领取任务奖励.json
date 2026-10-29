@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -3234,
-                "y": 290,
-                "zoom": 0.72
+                "x": -2114,
+                "y": 182,
+                "zoom": 0.61
             },
             "filename": "领取任务奖励",
-            "version": "v1.9.0"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_领取任务奖励": {
@@ -57,8 +57,7 @@
         },
         "post_delay": 4000,
         "next": [
-            "领取奖励",
-            "[JumpBack]返回主界面开始"
+            "领取奖励"
         ],
         "$__mpe_code": {
             "position": {
