@@ -5,7 +5,6 @@ import time
 import shutil
 import zipfile
 import datetime
-import subprocess
 import psutil
 
 # ---------- DPI 修复（必须在 import pyautogui 之前） ----------
@@ -108,26 +107,28 @@ def dump_failure(reason=""):
     except Exception as e:
         print(f"⚠️ 打包失败: {e}")
 
+# ---------- 结束指定名称的进程（使用项目已依赖的 psutil，不调用系统 taskkill） ----------
+def kill_process_by_name(name):
+    """结束所有名为 name 的进程，返回是否至少结束了一个。"""
+    killed = False
+    for proc in psutil.process_iter(["name"]):
+        try:
+            if proc.info["name"] and proc.info["name"].lower() == name.lower():
+                proc.kill()
+                killed = True
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            continue
+    return killed
+
 # ---------- 关闭已有游戏进程 ----------
 def close_game_process():
     try:
-        result = subprocess.run(
-            ["taskkill", "/f", "/im", GAME_PROCESS_NAME],
-            capture_output=True,
-            text=True,
-            encoding="oem",
-            errors="replace"
-        )
-        if result.returncode == 0:
+        if kill_process_by_name(GAME_PROCESS_NAME):
             print(f"✅ 已关闭游戏进程: {GAME_PROCESS_NAME}")
             time.sleep(2)
-            return True
-        elif "没有找到" in result.stderr or "not found" in result.stderr.lower():
-            print(f"ℹ️ 游戏进程未运行: {GAME_PROCESS_NAME}")
-            return True
         else:
-            print(f"⚠️ 关闭进程失败: {result.stderr}")
-            return False
+            print(f"ℹ️ 游戏进程未运行: {GAME_PROCESS_NAME}")
+        return True
     except Exception as e:
         print(f"❌ 关闭进程异常: {e}")
         return False
@@ -135,22 +136,11 @@ def close_game_process():
 # ---------- 关闭已在运行的启动器进程 ----------
 def close_launcher_process():
     try:
-        result = subprocess.run(
-            ["taskkill", "/f", "/im", LAUNCHER_PROCESS_NAME],
-            capture_output=True,
-            text=True,
-            encoding="oem",
-            errors="replace"
-        )
-        if result.returncode == 0:
+        if kill_process_by_name(LAUNCHER_PROCESS_NAME):
             print(f"✅ 已关闭启动器进程: {LAUNCHER_PROCESS_NAME}")
-            return True
-        elif "没有找到" in result.stderr or "not found" in result.stderr.lower():
-            print(f"ℹ️ 启动器进程未运行: {LAUNCHER_PROCESS_NAME}")
-            return True
         else:
-            print(f"⚠️ 关闭启动器进程失败: {result.stderr}")
-            return False
+            print(f"ℹ️ 启动器进程未运行: {LAUNCHER_PROCESS_NAME}")
+        return True
     except Exception as e:
         print(f"❌ 关闭启动器进程异常: {e}")
         return False

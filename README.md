@@ -9,12 +9,15 @@
 
 
 
-注意：pc预启动需要安装 Python 依赖
+## 新设备需要准备的东西
 
-在你要用来运行 pretask 的 Python 环境里执行：
+- Python 3（加入 PATH）
+- 运行 `DependencySetup_依赖库安装_win.bat` 安装 VC++ 运行库与 .NET 10
+- `pip install psutil pyautogui pygetwindow opencv-python pillow`
+- 手动添加 `moontonlauncher.lnk` 到 `assets/resource/agent/` 下
 
-pip install psutil pyautogui pygetwindow opencv-python pillow
-
+> 说明：`assets/resource/agent/launch_via_launcher.py` 中的 `CACHE_DIR = r"D:\Automate\Cache"`
+> 是固定路径，新设备若无该目录会自动跳过“失败打包”功能，不报错也不阻塞（前提是机器上有 D: 盘）。
 
 没发现bug，暂时不打算改了
 
