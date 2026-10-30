@@ -16,8 +16,5 @@
 - `pip install psutil pyautogui pygetwindow opencv-python pillow`
 - 手动添加 `moontonlauncher.lnk` 到 `assets/resource/agent/` 下
 
-> 说明：`assets/resource/agent/launch_via_launcher.py` 中的 `CACHE_DIR = r"D:\Automate\Cache"`
-> 是固定路径，新设备若无该目录会自动跳过“失败打包”功能，不报错也不阻塞（前提是机器上有 D: 盘）。
-
 没发现bug，暂时不打算改了
 
