@@ -14,8 +14,8 @@
         "class_regex": ".*",
         "window_regex": "潮汐守望者|Watcher Of Realms",
         "screencap": "PrintWindow",
-        "mouse": "PostMessageWithCursorPos",
-        "keyboard": "PostMessageWithCursorPos"
+        "mouse": "Seize",
+        "keyboard": "Seize"
       }
     },
     {
