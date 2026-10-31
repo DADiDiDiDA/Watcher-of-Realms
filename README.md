@@ -2,6 +2,7 @@
 
 > 个人自用存档，基于 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 把对应游戏的日常任务自动化。
 > 任务逻辑都写在 `assets` 里，欢迎直接 copy 改造。
+> 模拟器仅在 Mumu 模拟器上测试过；若运行在 PC 端，则仅在官方服（官服）测试过。
 
 ## 它能做什么
 
