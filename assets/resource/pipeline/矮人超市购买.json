@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 657,
-                "y": 186,
-                "zoom": 0.44
+                "x": 728,
+                "y": 205,
+                "zoom": 0.61
             },
             "filename": "矮人超市购买",
             "version": "v2.1.0"
@@ -93,10 +93,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    758,
-                    377,
-                    116,
-                    104
+                    392,
+                    146,
+                    566,
+                    335
                 ],
                 "template": [
                     "蓝色矮人商城图标.png"
