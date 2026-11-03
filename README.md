@@ -1,4 +1,4 @@
-# Watcher-of-Realms · 日常挂机
+# 潮汐守望者 · 日常挂机
 
 > 个人自用存档，基于 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 把对应游戏的日常任务自动化。
 > 任务逻辑都写在 `assets` 里，欢迎直接 copy 改造。
