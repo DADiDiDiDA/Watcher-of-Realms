@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 496,
-                "y": 370,
-                "zoom": 0.86
+                "x": 524,
+                "y": 381,
+                "zoom": 0.8
             },
             "filename": "矿场",
-            "version": "v2.0.7"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_矿场": {
@@ -99,10 +99,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    924,
-                    204,
-                    147,
-                    149
+                    655,
+                    173,
+                    507,
+                    276
                 ],
                 "template": [
                     "正常矿场.png",
