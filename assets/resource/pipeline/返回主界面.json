@@ -3,13 +3,29 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1794105678193,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "D:\\Automate\\Git-Maawork\\Watcher-of-Realms\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 473,
-                "y": -1076,
-                "zoom": 0.5
+                "x": 1234,
+                "y": -298,
+                "zoom": 0.53
             },
             "filename": "返回主界面",
-            "version": "v1.10.1"
+            "version": "v2.1.1"
+        }
+    },
+    "任务失败结束": {
+        "action": {
+            "type": "StopTask"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 627,
+                "y": 214
+            }
         }
     },
     "启动游戏": {
@@ -19,9 +35,10 @@
                 "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
             }
         },
+        "anchor": "启动游戏一次",
         "post_delay": 2000,
         "next": [
-            "返回主界面启动"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -367,6 +384,7 @@
                 "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
             }
         },
+        "anchor": "启动游戏一次",
         "post_delay": 2000,
         "timeout": 240000,
         "next": [
@@ -381,12 +399,12 @@
     },
     "直接执行任务": {
         "next": [
-            "返回主界面启动"
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1295,
-                "y": 831
+                "x": -1250,
+                "y": 844
             }
         }
     },
@@ -416,7 +434,7 @@
             }
         }
     },
-    "返回主界面启动": {
+    "返回主界面开始": {
         "timeout": 300000,
         "next": [
             "[JumpBack]是不是新角色展馆",
@@ -430,7 +448,8 @@
             "检测是否在主界面",
             "[JumpBack]是不是有待领取界面",
             "[JumpBack]左上角返回箭头图标",
-            "[JumpBack]战斗结束领取奖励-返回主界面"
+            "[JumpBack]战斗结束领取奖励-返回主界面",
+            "[Anchor][JumpBack]启动游戏一次"
         ],
         "$__mpe_code": {
             "position": {
@@ -439,15 +458,16 @@
             }
         }
     },
-    "返回主界面开始": {
+    "启动游戏开始": {
+        "post_delay": 2000,
         "next": [
             "直接执行任务",
             "启动游戏"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1670,
-                "y": 1035
+                "x": -1785,
+                "y": 959
             }
         }
     },
@@ -503,16 +523,12 @@
             }
         }
     },
-    "任务失败结束": {
-        "action": {
-            "type": "StopTask"
-        },
+    "$__mpe_anchor_启动游戏一次_返回主界面": {
         "$__mpe_code": {
             "position": {
-                "x": 627,
-                "y": 214
+                "x": 232,
+                "y": 3320
             }
-        },
-        "post_delay": 2000
+        }
     }
 }

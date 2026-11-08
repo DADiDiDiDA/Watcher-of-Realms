@@ -92,7 +92,7 @@
 
       "name": "🎮 登录游戏",
 
-      "entry": "返回主界面开始",
+      "entry": "启动游戏开始",
 
       "default_check": true,
 
@@ -622,7 +622,7 @@
 
           "pipeline_override": {
 
-            "返回主界面开始": {
+            "启动游戏开始": {
 
               "next": [
 
@@ -646,7 +646,7 @@
 
           "pipeline_override": {
 
-            "返回主界面开始": {
+            "启动游戏开始": {
 
               "next": [
 
