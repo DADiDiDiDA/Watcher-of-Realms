@@ -3,17 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1794105678193,
+            "lastSyncTime": 1794186563083,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "D:\\Automate\\Git-Maawork\\Watcher-of-Realms\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 1234,
-                "y": -298,
-                "zoom": 0.53
+                "x": 441,
+                "y": -1107,
+                "zoom": 0.46
             },
             "filename": "返回主界面",
             "version": "v2.1.1"
+        }
+    },
+    "$__mpe_anchor_启动游戏一次_返回主界面": {
+        "$__mpe_code": {
+            "position": {
+                "x": 156,
+                "y": 3647
+            }
         }
     },
     "任务失败结束": {
@@ -35,7 +43,9 @@
                 "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
             }
         },
-        "anchor": "启动游戏一次",
+        "anchor": {
+            "启动游戏一次": "启动游戏单引用"
+        },
         "post_delay": 2000,
         "next": [
             "返回主界面开始"
@@ -44,6 +54,59 @@
             "position": {
                 "x": -1262,
                 "y": 1165
+            }
+        }
+    },
+    "启动游戏单引用": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
+            }
+        },
+        "post_delay": 2000,
+        "timeout": 240000,
+        "next": [
+            "启动游戏单引用-限流",
+            "启动游戏单引用-清锚点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1012,
+                "y": 1399
+            }
+        }
+    },
+    "启动游戏单引用-清锚点": {
+        "anchor": {
+            "启动游戏一次": ""
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -512,
+                "y": 1867
+            }
+        }
+    },
+    "启动游戏单引用-限流": {
+        "max_hit": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": -762,
+                "y": 1633
+            }
+        }
+    },
+    "启动游戏开始": {
+        "post_delay": 2000,
+        "next": [
+            "直接执行任务",
+            "启动游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1785,
+                "y": 959
             }
         }
     },
@@ -384,7 +447,9 @@
                 "package": "com.gf.cxswz/com.moba.unityplugin.MobaGameQuickSplashActivity"
             }
         },
-        "anchor": "启动游戏一次",
+        "anchor": {
+            "启动游戏一次": "启动游戏单引用"
+        },
         "post_delay": 2000,
         "timeout": 240000,
         "next": [
@@ -449,25 +514,13 @@
             "[JumpBack]是不是有待领取界面",
             "[JumpBack]左上角返回箭头图标",
             "[JumpBack]战斗结束领取奖励-返回主界面",
+            "[JumpBack]是否位于英雄界面",
             "[Anchor][JumpBack]启动游戏一次"
         ],
         "$__mpe_code": {
             "position": {
                 "x": -429,
                 "y": 1012
-            }
-        }
-    },
-    "启动游戏开始": {
-        "post_delay": 2000,
-        "next": [
-            "直接执行任务",
-            "启动游戏"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -1785,
-                "y": 959
             }
         }
     },
@@ -523,11 +576,36 @@
             }
         }
     },
-    "$__mpe_anchor_启动游戏一次_返回主界面": {
+    "是否位于英雄界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    4,
+                    0,
+                    251,
+                    68
+                ],
+                "expected": [
+                    "英雄"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    35,
+                    19,
+                    25,
+                    16
+                ]
+            }
+        },
         "$__mpe_code": {
             "position": {
-                "x": 232,
-                "y": 3320
+                "x": 285,
+                "y": 3273
             }
         }
     }
