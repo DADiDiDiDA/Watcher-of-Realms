@@ -382,19 +382,6 @@
       "default_case": "second_nightmare_4",
       "cases": [
         {
-          "name": "second_nightmare_3",
-          "label": "噩梦Ⅲ",
-          "description": "第二次挑战噩梦Ⅲ",
-          "pipeline_override": {
-            "开始选择打什么难度第二次-巨龙遗迹": {
-              "next": [
-                "挑战难度-噩梦Ⅲ",
-                "[JumpBack]战斗结束领取奖励-第二次"
-              ]
-            }
-          }
-        },
-        {
           "name": "second_nightmare_4",
           "label": "噩梦IV",
           "description": "第二次挑战噩梦IV",
@@ -402,6 +389,19 @@
             "开始选择打什么难度第二次-巨龙遗迹": {
               "next": [
                 "挑战难度-噩梦IV",
+                "[JumpBack]战斗结束领取奖励-第二次"
+              ]
+            }
+          }
+        },
+        {
+          "name": "second_nightmare_3",
+          "label": "噩梦Ⅲ",
+          "description": "第二次挑战噩梦Ⅲ",
+          "pipeline_override": {
+            "开始选择打什么难度第二次-巨龙遗迹": {
+              "next": [
+                "挑战难度-噩梦Ⅲ",
                 "[JumpBack]战斗结束领取奖励-第二次"
               ]
             }
