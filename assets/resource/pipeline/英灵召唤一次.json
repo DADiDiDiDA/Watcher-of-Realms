@@ -84,6 +84,7 @@
         }
     },
     "开始单次召唤-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -369,6 +370,7 @@
         }
     },
     "确定收获召唤角色-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -442,6 +444,7 @@
         }
     },
     "进入任务界面检查召唤任务-错误处理": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -555,6 +558,7 @@
         }
     },
     "退出任务界面的检查-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -665,6 +669,7 @@
         }
     },
     "疑似是保底召唤召唤-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -750,6 +755,7 @@
         }
     },
     "召唤出5星角色-需要评价-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {

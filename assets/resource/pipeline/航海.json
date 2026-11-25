@@ -114,6 +114,7 @@
         }
     },
     "检测航海状态-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -286,6 +287,7 @@
         }
     },
     "是不是航海资源满了-结束-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {

@@ -175,6 +175,7 @@
         }
     },
     "进入菜单选择-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -232,6 +233,7 @@
         }
     },
     "选择魔潮-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -311,6 +313,7 @@
         }
     },
     "进入挑战要塞魔潮-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -346,6 +349,7 @@
         }
     },
     "确认不使用剩余次数-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -372,6 +376,7 @@
         }
     },
     "有没有扫荡按键-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {

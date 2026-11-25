@@ -196,6 +196,7 @@
         }
     },
     "强化装备任务未完成返回主界面-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -488,6 +489,7 @@
         }
     },
     "装备升级-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -556,6 +558,7 @@
         }
     },
     "进入任务界面检查升级装备任务-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -612,6 +615,7 @@
         }
     },
     "进入强化界面-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -669,6 +673,7 @@
         }
     },
     "进入自动强化界面-错误处理": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -808,6 +813,7 @@
         }
     },
     "选择第一件装备强化装备-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {

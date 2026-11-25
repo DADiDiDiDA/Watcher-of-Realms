@@ -191,6 +191,7 @@
         }
     },
     "第二次关闭签到窗口": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -250,6 +251,7 @@
         }
     },
     "检测是否有可领取奖励-签到-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {

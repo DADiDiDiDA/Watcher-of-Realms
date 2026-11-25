@@ -168,6 +168,7 @@
         }
     },
     "开始自动战斗-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -411,6 +412,7 @@
         }
     },
     "装备副本一-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -471,6 +473,7 @@
         }
     },
     "装备副本三-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -531,6 +534,7 @@
         }
     },
     "装备副本二-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -601,6 +605,7 @@
         }
     },
     "进入副本选择开始-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -680,6 +685,7 @@
         }
     },
     "进入神器本-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -793,6 +799,7 @@
         }
     },
     "进入装备本-装备一-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -849,6 +856,7 @@
         }
     },
     "进入装备本-装备三-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -905,6 +913,7 @@
         }
     },
     "进入装备本-装备二-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -988,6 +997,7 @@
         }
     },
     "开始自动战斗-扫荡-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1014,6 +1024,7 @@
         }
     },
     "扫荡结束确认结果-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1040,6 +1051,7 @@
         }
     },
     "最小化自动战斗-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1117,6 +1129,7 @@
         }
     },
     "开始检测哪一关完成了-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -1238,6 +1251,7 @@
         }
     },
     "返回上一级-扫荡体力不足-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {

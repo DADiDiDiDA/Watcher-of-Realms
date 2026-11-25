@@ -173,6 +173,7 @@
         }
     },
     "进入公会-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {

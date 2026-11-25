@@ -300,6 +300,7 @@
         }
     },
     "泰坦战斗二次确认第二次-泰坦废墟": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -356,6 +357,7 @@
         }
     },
     "泰坦战斗确认保存结果-第二次-泰坦废墟": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -412,6 +414,7 @@
         }
     },
     "泰坦战斗确认挑战结果-第二次-泰坦废墟": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -468,6 +471,7 @@
         }
     },
     "泰坦第一次自动战斗开始-第二次-泰坦废墟": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -576,6 +580,7 @@
         }
     },
     "进入泰坦废墟前置界面-第二次-泰坦废墟": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -632,6 +637,7 @@
         }
     },
     "进入泰坦废墟第二次-泰坦废墟": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -658,6 +664,7 @@
         }
     },
     "开始泰坦自动战斗-泰坦废墟-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {

@@ -171,6 +171,7 @@
         }
     },
     "有没有精灵通行证奖励-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -250,6 +251,7 @@
         }
     },
     "有没有金龙通行证奖励-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -351,6 +353,7 @@
         }
     },
     "点击精灵通行证有奖励的任务-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -584,6 +587,7 @@
         }
     },
     "进入通行证-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -711,6 +715,7 @@
         }
     },
     "一键领取金龙通行证奖励-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -737,6 +742,7 @@
         }
     },
     "金龙通行证任务领取-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {

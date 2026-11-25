@@ -243,6 +243,7 @@
         }
     },
     "进入角色界面-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -269,6 +270,7 @@
         }
     },
     "进入分解界面-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {

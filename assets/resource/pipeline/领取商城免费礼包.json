@@ -106,6 +106,7 @@
         }
     },
     "在商城大类型栏目寻找奖励图标第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -200,6 +201,7 @@
         }
     },
     "在商城寻找奖励图标横分类选择-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {

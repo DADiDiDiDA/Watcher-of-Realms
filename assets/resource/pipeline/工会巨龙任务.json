@@ -139,6 +139,7 @@
         }
     },
     "开始挑战巨龙-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -260,6 +261,7 @@
         }
     },
     "战斗结束领取奖励-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -533,6 +535,7 @@
         }
     },
     "是不是巨龙深渊榜单-巨龙深渊榜单-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -713,6 +716,7 @@
         }
     },
     "返回上一级-巨龙深渊榜单-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -772,6 +776,7 @@
         }
     },
     "进入全服任务界面-巨龙深渊榜单-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -828,6 +833,7 @@
         }
     },
     "进入巨龙-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -893,6 +899,7 @@
         }
     },
     "进入挑战要塞巨龙-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -959,6 +966,7 @@
         }
     },
     "进入菜单选择-巨龙-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
